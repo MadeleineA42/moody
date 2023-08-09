@@ -1,4 +1,12 @@
 # moody
+Our goal with this app is to help improve or amplify an individuals mood. On the homepage the user is presented with two options. If the user knows their mood, they are presented with various links to aid them. If the user is unsure of their mood, they are presented with a short quiz to help determine their mood. 
+
+Each mood will have a dedicated page that captures the unique styling of the feeling. On each page, the user will 
+
+
+
+
+
 Separate HTMLs for different moods
 Katie has nature images 
 links to songs/motivational quotes Youtube audio library in create section 
