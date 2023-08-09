@@ -1,3 +1,51 @@
 body {
+background-image: url(/assets/images/DSC00383.jpg);
+background-size: cover;
+background-attachment: fixed;
 color: black;
+}
+
+
+h1{
+  display: flex;
+  justify-content: center;
+  border: solid black 5px;
+  background-color: rgba(245, 245, 245, 0.5);
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.cowmascot {
+  display: flex;
+  justify-content: center;
+   margin: 0 auto;
+  height: 400px;
+}
+
+
+nav{
+  border: solid black 5px;
+  background-color: rgba(52, 219, 127, 0.5);
+  padding: 10px;
+  margin: 30px 40%;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+ul{
+  list-style: none;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  border: solid black 5px;
+  background-color: rgba(245, 245, 245, 0.5);
 }
