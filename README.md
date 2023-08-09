@@ -10,3 +10,8 @@ CSS framework  bootstrap
 
 Unsure of your mood? Check-in here 5 questions local storage
 If you already know mood, follow these links?
+
+If youre happy: links to volunteer sites/charities
+if you're sad: links to cheerful things
+if stressed: games/songs for destressing
+if angry: meditation links? lo-fi/breathing techniques?
