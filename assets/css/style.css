@@ -3,7 +3,6 @@ background-image: url(/assets/images/DSC00383.jpg);
 background-size: cover;
 background-attachment: fixed;
 color: black;
-<<<<<<< HEAD
 }
 
 
@@ -50,8 +49,3 @@ main {
   border: solid black 5px;
   background-color: rgba(245, 245, 245, 0.5);
 }
-=======
-background-image: url (assets/images/DSC00383.jpg);
-background-size: cover;
-background-attachment: fixed;
->>>>>>> 1428ff69466f88b3d8c185fb5270e96a206a1859
