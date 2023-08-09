@@ -1,4 +1,5 @@
 body {
 color: black;
-
-}
+background-image: url (assets/images/DSC00383.jpg);
+background-size: cover;
+background-attachment: fixed;
