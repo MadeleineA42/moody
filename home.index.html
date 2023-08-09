@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Feelin' Moody?</title>
     
     <title>Feelin' Moody</title>
 </head>
@@ -21,7 +23,21 @@
 </header>
 <body>
     <main>
-            quiz here 
+        <div style="text-align:center;" class="startQuestion" id="startQuestion">
+            <h1 class="title">**Moody question on user mood**</h1>
+            <p class="instructions">Answer the following questions to best tailor your mood feedback</p>
+            <button id="start">Start Quiz!</button>
+          </div>
+        <div class="quizQuestions" id="quizQuestions">
+            <div class="quiz">
+              <h3 id="question">Questions go here</h3>
+              <div id="answer-btns">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+              </div>
+              <button id="next-btn">Next</button>
+            </div>
     </main>
 </body>
 </html>
