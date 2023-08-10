@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Feelin' Moody</title>
-</head>
-<h1>Feelin' Moody? <br> Check-in down below</h1>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Feelin' Moody</title>
 </head>
 <header>
+  <h1>Feelin' Moody? <br> Check-in down below</h1>
+  <nav #="">
     <img class="cowmascot" src="assets/images/IMG_0066.PNG" alt="MOOdy the cow mascot with blue tie">
-    <nav #="">
-        <ul>
-            <li>HAPPY 😃</li>
-            <li>SAD 😞</li>
-            <li>STRESSED 😫</li>
-            <li>ANGRY 😡</li>
-            <li>LOVED 😍</li>
-        </ul>
-    </nav>
+    <ul>
+      <li>HAPPY 😃</li>
+      <li>SAD 😞</li>
+      <li>STRESSED 😫</li>
+      <li>ANGRY 😡</li>
+      <li>LOVED 😍</li>
+    </ul>
+  </nav>
 </header>
+
 <body>
-    <main>
+  <main>
+    <!-- Quiz Here  -->
+    <div class="mainQuiz" style="text-align:center;" class="startQuestion" id="startQuestion">
+      <h1 class="title">**Moody question on user mood**</h1>
+      <p class="instructions">Answer the following questions to best tailor your mood feedback</p>
+      <button id="start">Get Mooooody!</button>
+    </div>
+    <div class="quizQuestions" id="quizQuestions">
+      <div class="quiz">
+        <h3 id="question">Questions go here</h3>
+        <div id="answer-btns">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+        </div>
+        <button id="next-btn">Next</button>
+      </div>
 
-            <!-- Quiz Here  -->
-        <div style="text-align:center;" class="startQuestion" id="startQuestion">
-            <h1 class="title">**Moody question on user mood**</h1>
-            <p class="instructions">Answer the following questions to best tailor your mood feedback</p>
-            <button id="start">Get Mooooody!</button>
-          </div>
-        <div class="quizQuestions" id="quizQuestions">
-            <div class="quiz">
-              <h3 id="question">Questions go here</h3>
-              <div id="answer-btns">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-              </div>
-              <button id="next-btn">Next</button>
-            </div>
-
-    </main>
+  </main>
 </body>
+
+<footer>
+  <p>Made with ❤️ by YMMMK</p>
+</footer>
+
 </html>

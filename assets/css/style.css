@@ -1,14 +1,18 @@
+/* //////////////////////////////// */
+/* Main homescreen body */
+/* //////////////////////////////// */
 body {
-background-image: url(/assets/images/DSC00383.jpg);
+background-image: url(/assets/images/homescreen.png);
 background-size: cover;
 background-attachment: fixed;
 color: black;
 }
 
 
-h1{
+header h1{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   border: solid black 5px;
   background-color: rgba(245, 245, 245, 0.5);
   padding: 20px;
@@ -17,28 +21,24 @@ h1{
 }
 
 
-.cowmascot {
+nav {
   display: flex;
   justify-content: center;
-   margin: 0 auto;
-  height: 400px;
 }
 
 
-nav{
-  border: solid black 5px;
-  background-color: rgba(52, 219, 127, 0.5);
-  padding: 10px;
-  margin: 30px 40%;
-  font-size: large;
+.cowmascot {
+  height: 600px;
+}
+
+
+li {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-
-ul{
+  justify-content: center;
+  border: solid black 5px;
+  background-color: rgba(177, 246, 244, 0.643);
+  padding: 10px;
+  margin: 45px auto;
   list-style: none;
 }
 
@@ -48,8 +48,21 @@ main {
   justify-content: center;
   border: solid black 5px;
   background-color: rgba(245, 245, 245, 0.5);
-<<<<<<< HEAD
+  margin: 70px;
+  margin-top: 40px;
+  padding: 10px;
 }
-=======
+
+
+footer p {
+  border: solid black 5px;
+  background-color: rgba(177, 246, 244, 0.643);
+  padding: 10px;
+  margin: 30px 40%;
+  display: flex;
+  justify-content: center;
 }
->>>>>>> fa6c5ecf34b2c4276ac32efd9571ab60d3cb09a0
+
+/* //////////////////////////////// */
+/* END OF MAIN HOME-SCREEN */
+/* /////////////////////////////// */
