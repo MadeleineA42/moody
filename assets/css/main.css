@@ -44,6 +44,11 @@ li {
   list-style: none;
 }
 
+.happy-cow {
+  height: 150px;
+  width: 150px;
+  }
+
 
 main {
   display: flex;
