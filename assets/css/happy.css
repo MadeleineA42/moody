@@ -6,7 +6,7 @@
 
 
  /* header */
- .jumbotron {
+ /* .jumbotron {
    background-image: linear-gradient(to right, #fff30e, #e23003);
    color: white;
    justify-content: center;
@@ -16,7 +16,7 @@
    margin: auto;
    text-align: center;
    height: 150px;
- }
+ } */
 
 
 
@@ -26,8 +26,8 @@
    justify-content: center;
    padding-bottom: 100px;
    height: 200px;
-   
  }
+
 
 
  main {
@@ -37,8 +37,8 @@
    background-color: rgba(245, 245, 190, 0.5);
  }
  
+
+
  h4 {
   text-align: center;
-  
-
  }
