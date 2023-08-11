@@ -1,44 +1,42 @@
- body {
-   background-image: url(/assets/images/happy-background.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
- }
+* {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-image: url(/assets/images/happy-background.jpg);
+  background-size: cover;
+  background-attachment: fixed; 
+}
 
 
- /* header */
- /* .jumbotron {
-   background-image: linear-gradient(to right, #fff30e, #e23003);
+header {
+   background: linear-gradient(to right, #FFF30E, #E23003);
    color: white;
    justify-content: center;
    border: solid rgb(251, 112, 19) 5px;
+   box-sizing: border-box;
    background-color: rgba(245, 245, 245, 0.5);
-   padding: 20px;
-   margin: auto;
+   padding-bottom: 0;
    text-align: center;
    height: 150px;
- } */
+}
 
 
-
-
- .happy-cow {
-   display: flex;
-   justify-content: center;
-   padding-bottom: 100px;
-   height: 200px;
- }
-
-
-
- main {
-   justify-content: left;
-   border: solid rgb(251, 112, 19) 5px;
-   border-top: 0px;
-   background-color: rgba(245, 245, 190, 0.5);
- }
- 
-
-
- h4 {
+h1{
+  color: rgb(255, 255, 255);
+  height: 30px;
   text-align: center;
- }
+}
+
+.happy-cow {
+height: 100px;
+width: 100px;
+}
+
+nav {
+  background-color: rgba(246, 240, 232, 0.543);
+}
+
