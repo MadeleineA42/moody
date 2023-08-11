@@ -4,14 +4,14 @@
 
 
 body {
-background-image: url(/assets/images/home-background.png);
-background-size: cover;
-background-attachment: fixed;
-color: black;
+  background-image: url(/assets/images/home-background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
 }
 
 
-header h1{
+header h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -46,6 +46,7 @@ nav {
   list-style: none;
 }
 
+<<<<<<< HEAD
 #happybtn:hover {
   background-color: rgba(255, 251, 3, 0.8);
   cursor: grab;
@@ -70,6 +71,33 @@ nav {
   background-color: rgba(255, 3, 213, 0.7);
   cursor: grab;
 }
+=======
+.happy-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.loved-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.sad-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.angry-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.stressed-cow {
+  height: 200px;
+  width: 150px;
+}
+
+>>>>>>> 120edaeba7e210add9a1e40f4973239d9918e352
 
 main {
   display: flex;
