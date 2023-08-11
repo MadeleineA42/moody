@@ -1,6 +1,8 @@
 /* //////////////////////////////// */
 /* Main homescreen body */
 /* //////////////////////////////// */
+
+
 body {
 background-image: url(/assets/images/home-background.png);
 background-size: cover;
