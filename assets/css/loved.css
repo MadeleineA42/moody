@@ -19,6 +19,8 @@
      justify-content: center;
      border: solid rgb(199, 162, 120) 5px;
      box-sizing: border-box;
+     border-image: linear-gradient(to right, #93387f,  #f3b8dd);
+     border-image-slice: 1;
      background-color: rgba(245, 245, 245, 0.5);
      padding-bottom: 0;
      text-align: center;

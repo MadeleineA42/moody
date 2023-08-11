@@ -12,17 +12,30 @@ body {
 
 
 header h1 {
-  display: flex;
+  background: linear-gradient(to right, #7adcfd, #071c97);
+  color: white;
   justify-content: center;
-  flex-wrap: wrap;
-  border: solid black 5px;
+  border: solid #071c97 5px;
+  box-sizing: border-box;
+  border-image: linear-gradient(to right, #071c97, #7adcfd);
+  border-image-slice: 1;
   background-color: rgba(245, 245, 245, 0.5);
   border-radius: 20px;
   padding: 20px;
   margin: 20px 100px;
   text-align: center;
+  height: 150px;
+  
 }
 
+ h1 {
+  color: rgb(255, 255, 255);
+  height: 30px;
+  padding-top: 10px;
+  text-align: center;
+  text-shadow: 4px 4px 8px #7adcfd;
+  font-family: 'Roboto', sans-serif;
+ }
 
 nav {
   display: flex;

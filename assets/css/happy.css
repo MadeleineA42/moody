@@ -19,6 +19,8 @@ header {
    justify-content: center;
    border: solid rgb(209, 129, 75) 5px;
    box-sizing: border-box;
+   border-image: linear-gradient(to right, #cb6600,  #e8cc52);
+   border-image-slice: 1;
    background-color: rgba(245, 245, 245, 0.5);
    padding-bottom: 0;
    text-align: center;
