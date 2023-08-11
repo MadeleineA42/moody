@@ -12,21 +12,19 @@ body {
 
 
 header h1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   background: linear-gradient(to right, #7adcfd, #071c97);
   color: white;
-  justify-content: center;
-  border: solid #071c97 5px;
-  box-sizing: border-box;
-  border-image: linear-gradient(to right, #071c97, #7adcfd);
-  border-image-slice: 1;
-  background-color: rgba(245, 245, 245, 0.5);
+  border: solid black 5px;
   border-radius: 20px;
   padding: 20px;
   margin: 20px 100px;
   text-align: center;
-  height: 150px;
-  
+  height: 100px;
 }
+
 
  h1 {
   color: rgb(255, 255, 255);
