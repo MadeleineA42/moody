@@ -5,6 +5,15 @@ Each mood will have a dedicated page that captures the unique styling of the fee
 
 
 
+Katie: index.html (main page) and overall styling with tailwind and css. Please check in with her (or Madeleine) if you need to change or adjust anything on the main page.
+
+Yana: happy and loved htmls along with css' for those moods.
+
+Marcus: Mood quiz using JS, collaborating with Mike
+
+Mike: Sad Html, Gathering media for each mood, doing those APIs and collab with Marcus on the JS.
+
+Madeleine: stressed and angry htmls. Collabing with katie for overall styling using tailwind. 
 
 
 Separate HTMLs for different moods
