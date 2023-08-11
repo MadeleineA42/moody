@@ -2,7 +2,7 @@
 /* Main homescreen body */
 /* //////////////////////////////// */
 body {
-background-image: url(/assets/images/homescreen.png);
+background-image: url(moody/assets/images/home-background.png);
 background-size: cover;
 background-attachment: fixed;
 color: black;
