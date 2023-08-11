@@ -4,14 +4,14 @@
 
 
 body {
-background-image: url(/assets/images/home-background.png);
-background-size: cover;
-background-attachment: fixed;
-color: black;
+  background-image: url(/assets/images/home-background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
 }
 
 
-header h1{
+header h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -47,7 +47,27 @@ li {
 .happy-cow {
   height: 150px;
   width: 150px;
-  }
+}
+
+.loved-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.sad-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.angry-cow {
+  height: 150px;
+  width: 150px;
+}
+
+.stressed-cow {
+  height: 200px;
+  width: 150px;
+}
 
 
 main {
