@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
     <title>I am feeling HAPPY!</title>
 </head>
+
 <body>
+    <!-- Header -->
     <header>
         <h1>I am feeling HAPPY!</h1>
         <img class="happy-cow" src="/assets/images/happy-cow.png" alt="Happy cow">
     </header>
+    <!-- Nav bar -->
     <nav>
         <h2>To boost your moodiness even more:</h2>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <div id="video-container"></div> 
+        <!-- Add the search form container here -->
+        <div id="search-form-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for more happy content">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
     </nav>
 
-    
-    
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="./assets/javascript/yanas.js"></script>
 </body>
+
 </html>

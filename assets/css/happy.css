@@ -1,50 +1,106 @@
 * {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
   background-image: url(/assets/images/happy-background.jpg);
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
 }
-
 
 header {
-   background: linear-gradient(to right, #e8cc52, #cb6600);
-   color: white;
-   justify-content: center;
-   border: solid rgb(209, 129, 75) 5px;
-   box-sizing: border-box;
-   border-image: linear-gradient(to right, #cb6600,  #e8cc52);
-   border-image-slice: 1;
-   background-color: rgba(245, 245, 245, 0.5);
-   padding-bottom: 0;
-   text-align: center;
-   height: 150px;
+  background: linear-gradient(to right, #e8cc52, #cb6600);
+  color: white;
+  text-align: center;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, #cb6600, #e8cc52);
+  border-image-slice: 1;
+  background-color: rgba(245, 245, 245, 0.5);
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 200px; /* Increased height to accommodate the cow face */
 }
 
-
-h1{
+h1 {
   color: rgb(255, 255, 255);
-  height: 30px;
-  padding-top: 10px;
-  text-align: center;
-  text-shadow: 4px 4px 8px rgba(252, 233, 27, 0.796);
+  font-size: 36px;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(252, 233, 27, 0.796);
   font-family: 'Dancing Script', cursive;
 }
 
 .happy-cow {
-height: 150px;
-width: 150px;
+  height: auto;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px; /* Add margin to position it underneath the text */
 }
 
 nav {
-  background-color: rgba(237, 225, 168, 0.45);
-  height: 150px;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.496);
+  background-color: rgba(237, 225, 168, 0.8);
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center-align the content horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center-align the content vertically */
 }
 
+
+
+
+nav h2 {
+  color: #cb6600;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 250px;
+  border: 2px solid #cb6600;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#search-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+button[type="submit"] {
+  background-color: #cb6600;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Center the videos */
+#video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Size of the videos */
+iframe {
+  width: 280px;
+  height: 157.5px;
+}
