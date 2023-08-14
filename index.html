@@ -4,7 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'cherry': ['Cherry Bomb One', 'cursive'],
+            'quicksand': ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+
+          }
+        }
+      }
+    }
+  </script>
   <title>Feelin' Moody</title>
 </head>
 
@@ -12,15 +29,17 @@
   <!-- background -->
   <div class="bg-cover bg-fixed" style='background-image: url("./assets/images/home-background.png")'>
 
-    <!-- header -->
-    <div class="text-7xl font-extrabold text-center mb-32">
-      <span class="bg-gradient-to-r from-white to to-blue-900">
+    <!-- header text for feelin' moody -->
+    <div class="font-cherry text-7xl text-center py-8 mb-32">
+      <!--box for feelin' moody  -->
+      <span class="rounded-xl bg-gradient-to-r from-white to to-blue-800 px-8 py-1">
         Feelin' Moody?
       </span>
     </div>
 
 
-    <!-- Nav bar with Cow image -->
+
+    <!-- Nav bar with Cow image and buttons -->
     <div class="flex justify-center">
       <img class="animate-bounce max-h-screen min-h-screen" src="./assets/images/main-cow.PNG"
         alt="MOOdy the cow mascot with blue tie">
@@ -71,13 +90,21 @@
         </div>
 
     </main> -->
+
+
+
+
+    <footer>
+      <div class="flex justify-center">
+        <div class="font-quicksand px-8">Made with ❤️ by YMMMK</div>
+      </div>
+    </footer>
+
+
+
   </div>
 </body>
 
-<!-- <footer>
-  <p>Made with ❤️ by YMMMK</p>
-</footer> -->
 
-</html>
 
 </html>
