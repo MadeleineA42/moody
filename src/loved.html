@@ -8,21 +8,40 @@
     <title>I am feeling LOVE!</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>I am feeling LOVE!</h1>
         <img class="loved-cow" src="/assets/images/loved-cow.PNG" alt="Cow with heart instead of eyes">
     </header>
-    <nav>
-        <h2>To boost your moodiness even more:</h2>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
 
-    
-    
+    <!-- Notification -->
+    <div class="notification" id="notification">Quote saved!</div>
+
+    <!-- Nav container -->
+    <nav>
+        <h2>To boost your love even more</h2>
+        <div class="quote-container" id="quote-container">
+            <p class="instructions">Push button to generate a love quote for your loved ones</p>
+            <blockquote id="quote"></blockquote>
+            <p id="author"></p>
+            <div class="button-container">
+                <button id="generate-button">Generate Quote</button>
+                <button class="save-button" id="save-button">Save Quote</button>
+                <button id="myfav-button" class="myfav-button">Favorite Quotes</button>
+            </div>
+        </div>
+    </nav>
+    <div class="saved-quotes-container" id="saved-quotes-container">
+        <h2>Your Favorite Quotes</h2>
+        <ul class="saved-quotes-list" id="saved-quotes-list">
+            <!-- Saved quotes will be displayed here -->
+        </ul>
+    </div>
+
+    <div class="saved-quotes-container" id="saved-quotes-container">
+        <!-- Saved quotes -->
+    </div>
+
+    <script src="/assets/javascript/yanas2.js"></script>
 </body>
 </html>

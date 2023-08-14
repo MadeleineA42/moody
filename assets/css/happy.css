@@ -27,8 +27,10 @@ header {
 
 h1 {
   color: rgb(255, 255, 255);
-  font-size: 36px;
-  padding: 10px;
+  font-size: 50px;
+  height: 30px;
+  padding-top: 10px;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(252, 233, 27, 0.796);
   font-family: 'Dancing Script', cursive;
 }
@@ -54,10 +56,11 @@ nav {
 
 
 
-nav h2 {
+h2 {
   color: #cb6600;
-  font-size: 24px;
+  font-size: 29px;
   margin-bottom: 10px;
+  text-shadow: 4px 4px 8px rgba(92, 90, 90, 0.519);
 }
 
 form {
