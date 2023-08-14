@@ -1,109 +1,284 @@
-const questions = [
+let questionEl = document.getElementById("question");
+let answerEl = document.getElementById("answers");
+let startBtn = document.getElementById("start");
+let endResults = document.getElementById("results");
+let finalMood = document.getElementById("moodResult");
+let happyResult = document.getElementById("happyResult");
+let sadResult = document.getElementById("sadResult");
+let stressedResult = document.getElementById("stressedResult");
+let lovedResult = document.getElementById("lovedResult");
+let angryResult = document.getElementById("angryResult");
+
+var questionIndex = 0;
+
+startBtn.addEventListener("click", startQuiz);
+
+var happyPoints = 0;
+var sadPoints = 0;
+var stressedPoints = 0;
+var lovedPoints = 0;
+var angryPoints = 0;
+
+const questionList = [
     {
-        //question index 0
-        question: "What color is the sun?",
+        question: "What holiday best describes you?",
         answers: [
-            { text: "Yellow", correct: true },
-            { text: "Blue", correct: false },
-            { text: "Red", correct: false },
-        ]
+            { text: "Christmas", happy: true },
+            { text: "Tax Day", sad: true },
+            { text: "April Fools", stressed: true },
+            { text: "Valentines Day", loved: true },
+            { text: "Election Day", angry: true },
+        ],
     },
     {
-        //question index 1
-        question: "What animal is taller than a hippo?",
+        question: "What color best descibes how you feel?",
         answers: [
-            { text: "Mouse", correct: false },
-            { text: "Giraffe", correct: true },
-            { text: "Dog", correct: false },
-        ]
+            { text: "Yellow", happy: true },
+            { text: "Blue", sad: true },
+            { text: "Green", stressed: true },
+            { text: "Pink", loved: true },
+            { text: "Red", angry: true },
+        ],
     },
     {
-        //question index 2
-        question: "What color is lime?",
+        question: "What animal best descibes your mood?",
         answers: [
-            { text: "Yellow", correct: false },
-            { text: "Blue", correct: false },
-            { text: "Green", correct: true },
-        ]
+            { text: "Dog", happy: true },
+            { text: "Donkey", sad: true },
+            { text: "Mouse", stressed: true },
+            { text: "Dove", loved: true },
+            { text: "Bull", angry: true },
+        ],
+    },
+    {
+        question: "What cartoon best describes how you're feeling today?",
+        answers: [
+            { text: "Spongebob", happy: true },
+            { text: "Eeyore", sad: true },
+            { text: "Courage the Cowerdly Dog", stressed: true },
+            { text: "Pepe Le Pew", loved: true },
+            { text: "Grumpy from Snow White", angry: true },
+        ],
+    },
+    {
+        question: "How do you view the glass?",
+        answers: [
+            { text: "Half Full", happy: true },
+            { text: "Half Empty", sad: true },
+            { text: "Soon to be Broken", stressed: true },
+            { text: "IDC I'm in Love!", loved: true },
+            { text: "Forget the glass, it better be alcohol...", angry: true },
+        ],
+    },
+    {
+        question: "What weekday best describes you?",
+        answers: [
+            { text: "Friday", happy: true },
+            { text: "Tuesday", sad: true },
+            { text: "Monday", stressed: true },
+            { text: "Thursday", loved: true },
+            { text: "Wednesday", angry: true },
+        ],
+    },
+    {
+        question: "What type of weather best describes your mood?",
+        answers: [
+            { text: "Sunny", happy: true },
+            { text: "Rainy", sad: true },
+            { text: "Tornado", stressed: true },
+            { text: "A Beautiful Sunset with a glass of wine", loved: true },
+            { text: "Lightning", angry: true },
+        ],
+    },
+    {
+        question: "What's your dream vacation right now?",
+        answers: [
+            { text: "Beach", happy: true },
+            { text: "In a lonely, dark forest", sad: true },
+            { text: "New York City on New Years Eve", stressed: true },
+            { text: "Paris", loved: true },
+            { text: "A Rage Room", angry: true },
+        ],
+    },
+    {
+        question: "If you were a plant, what would you be?",
+        answers: [
+            { text: "Sunflower", happy: true },
+            { text: "Charlie Brown Christmas Tree", sad: true },
+            { text: "Cactus", stressed: true },
+            { text: "Red Rose", loved: true },
+            { text: "Venus Fly Trap", angry: true },
+        ],
+    },
+    {
+        question: "Which dessert best describes you?",
+        answers: [
+            { text: "Candy", happy: true },
+            { text: "Ice Cream", sad: true },
+            { text: "Oatmeal Raisin Cookie that looks like Chocolate Chips", stressed: true },
+            { text: "Cotton Candy", loved: true },
+            { text: "Fruit Cake", angry: true },
+        ],
+    },
+    {
+        question: "What Movie Genre best describes your mood?",
+        answers: [
+            { text: "Comedy", happy: true },
+            { text: "Drama", sad: true },
+            { text: "Thriller", stressed: true },
+            { text: "Romantic", loved: true },
+            { text: "Action", angry: true },
+        ],
     },
 ];
 
-const questionEl = document.getElementById("question");
-const answerBtns = document.getElementById("answer-btns");
-const nextBtn = document.getElementById("next-btn");
-const scoreBox = document.getElementById("score")
+endResults.style.display = "none"
 
-let currentQuestionIndex = 0;
-let score = 0;
-
-document.getElementById("timer").style.display = "none"
-document.getElementById("finishQuiz").style.display = "none"
-
-//when the quiz is started, reset score and reset questions
+startBtn.addEventListener("click", startQuiz)
 function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    nextBtn.innerHTML = "Next";
     showQuestion();
+    questionIndex = 0;
 }
 
 function showQuestion() {
-    //taking the question using indecies 0, 1, 2
-    answerBtns.textContent = ""
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNum = currentQuestionIndex + 1;
-    questionEl.innerHTML = questionNum + ". " + currentQuestion.question;
-    console.log(questionNum)
+    answerEl.innerHTML = "";
+    questionEl.innerText = "";
+    endResults.style.display = "none"
+
+    let currentQuestion = questionList[questionIndex];
+    questionEl.innerText = currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
+        answerEl.appendChild(button);
         button.classList.add("btn");
-        answerBtns.appendChild(button);
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
+        if (answer.happy) {
+            button.dataset.emotion = "happy";
         }
-        button.addEventListener("click", selectAnswer);
-    })
+        if (answer.sad) {
+            button.dataset.emotion = "sad";
+        }
+        if (answer.stressed) {
+            button.dataset.emotion = "stressed";
+        }
+        if (answer.loved) {
+            button.dataset.emotion = "loved";
+        }
+        if (answer.angry) {
+            button.dataset.emotion = "angry";
+        }
+        button.addEventListener("click", function () {
+            selectAnswer(button);
+            console.log("answer selected!");
+        });
+    });
 }
 
-function nextQuestion() {
-    currentQuestionIndex++
-    showQuestion()
-    //need to add function to go to id=finishQuiz after last question
-    // if () {
-    //     console.log("all done")
-    //     allDone();
-    // }
-}
+function selectAnswer(button) {
+    const selection = button.dataset.emotion;
 
-nextBtn.addEventListener("click", nextQuestion)
-
-function resetQuiz() {
-    nextBtn.style.display = "none";
-    while (answerBtns.firstChild) {
-        answerBtns.removeChild(answerBtns.firstChild);
+    if (selection === "happy") {
+        happyPoints += 1;
+        console.log("happy", happyPoints);
     }
-}
-function selectAnswer(e) {
-    const selectedBtn = e.target;
-    //correct answers are in green, incorrect in red
-    const isCorrect = selectedBtn.dataset.correct === "true";
-    if (isCorrect) {
-        selectedBtn.classList.add("correct");
-        score++;
-        console.log("Correct!");
+    if (selection === "sad") {
+        sadPoints += 1;
+        console.log("sad", sadPoints);
+    }
+    if (selection === "stressed") {
+        stressedPoints += 1;
+        console.log("stressed", stressedPoints);
+    }
+    if (selection === "loved") {
+        lovedPoints += 1;
+        console.log("loved", lovedPoints);
+    }
+    if (selection === "angry") {
+        angryPoints += 1;
+        console.log("angry", angryPoints);
+    }
+
+    questionIndex++;
+    if (questionIndex < questionList.length) {
+        showQuestion();
     } else {
-        selectedBtn.classList.add("incorrect");
-        //need to figure out how to take off time when incorrect
-        console.log("Incorrect!");
+        answerEl.innerHTML = "";
+        questionEl.innerText = "";
+        getMoodRating();
+        showResults();
     }
-    Array.from(answerBtns.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
+
+    function getMoodRating() {
+        if (happyPoints >= 3) {
+            console.log("You're Happy!");
+            happyResult.innerHTML = "*Happy Link*"
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = ""
         }
-        button.disabled = true;
-    })
-    nextBtn.style.display = "block";
+        if (sadPoints >= 3) {
+            console.log("You're Sad.");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = "*Sad Link*"
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = ""
+        }
+        if (stressedPoints >= 3) {
+            console.log("You're Stressed!");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = "*Stressed Link*"
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = ""
+        }
+        if (lovedPoints >= 3) {
+            console.log("You're Loved!");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = "*Loved Link*"
+            angryResult.innerHTML = ""
+        }
+        if (angryPoints >= 3) {
+            console.log("You're Angry!");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = "*Angry Link*"
+        }
+    }
+
+    const API_KEY = 'YOUR_API_KEY_HERE';
+const CHANNEL_ID = 'YOUR_CHANNEL_ID_HERE';
+
+// Endpoint to get uploads playlistId from a channel
+const CHANNEL_ENDPOINT = `https://www.googleapis.com/youtube/v3/channels?id=${CHANNEL_ID}&part=contentDetails&key=${API_KEY}`;
+
+// Fetch uploads playlistId from the channel
+    fetch(CHANNEL_ENDPOINT)
+    .then(response => response.json())
+    .then(data => {
+    const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
+
+    // Endpoint to get videos from the uploads playlist
+    const PLAYLIST_ITEMS_ENDPOINT = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&maxResults=5&part=snippet&key=${API_KEY}`;
+
+    return fetch(PLAYLIST_ITEMS_ENDPOINT);
+  })
+    .then(response => response.json())
+    .then(data => {
+    console.log(data.items);  // Logs the videos in the uploads playlist
+  })
+    .catch(error => {
+    console.error('Error fetching from YouTube API', error);
+  });
+  
+    function showResults() {
+        endResults.style.display = "block";
+    }
+
 }
-startQuiz();
