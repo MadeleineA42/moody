@@ -209,4 +209,47 @@ function selectAnswer(button) {
         showResults();
     }
 
+    function getMoodRating() {
+        if (happyPoints >= 3) {
+            console.log("You're Happy!");
+            happyResult.innerHTML = "*Happy Link*"
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = ""
+        }
+        if (sadPoints >= 3) {
+            console.log("You're Sad.");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = "*Sad Link*"
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = ""
+        }
+        if (stressedPoints >= 3) {
+            console.log("You're Stressed!");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = "*Stressed Link*"
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = ""
+        }
+        if (lovedPoints >= 3) {
+            console.log("You're Loved!");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = "*Loved Link*"
+            angryResult.innerHTML = ""
+        }
+        if (angryPoints >= 3) {
+            console.log("You're Angry!");
+            happyResult.innerHTML = ""
+            sadResult.innerHTML = ""
+            stressedResult.innerHTML = ""
+            lovedResult.innerHTML = ""
+            angryResult.innerHTML = "*Angry Link*"
+        }
+    }
+
 }
