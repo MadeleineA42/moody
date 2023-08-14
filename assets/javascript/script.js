@@ -131,3 +131,11 @@ const questionList = [
         ],
     },
 ];
+
+endResults.style.display = "none"
+
+startBtn.addEventListener("click", startQuiz)
+function startQuiz() {
+    showQuestion();
+    questionIndex = 0;
+}
