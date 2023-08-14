@@ -6,14 +6,31 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+           'grotesque': ['Bricolage Grotesque', 'sans-serif'],
+            // 'quicksand': ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+
+          }
+        }
+      }
+    }
+  </script>
 </head>
     <header>
         <a href="/index.html">
             <img class="stressed-cow" src="/assets/images/stressed-cow.PNG" alt="animated cow in distress" >
         </a> 
     </header>
-    <body class="bg-violet-200">
+    <body class="bg-violet-200 font-grotesque">
         <h1 class="text-3xl font-bold text-violet-800 flex justify-center">
         Feelin' stressed?
         </h1>
