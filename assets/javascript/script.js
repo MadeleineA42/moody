@@ -139,3 +139,38 @@ function startQuiz() {
     showQuestion();
     questionIndex = 0;
 }
+
+function showQuestion() {
+    answerEl.innerHTML = "";
+    questionEl.innerText = "";
+    endResults.style.display = "none"
+
+    let currentQuestion = questionList[questionIndex];
+    questionEl.innerText = currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        answerEl.appendChild(button);
+        button.classList.add("btn");
+        if (answer.happy) {
+            button.dataset.emotion = "happy";
+        }
+        if (answer.sad) {
+            button.dataset.emotion = "sad";
+        }
+        if (answer.stressed) {
+            button.dataset.emotion = "stressed";
+        }
+        if (answer.loved) {
+            button.dataset.emotion = "loved";
+        }
+        if (answer.angry) {
+            button.dataset.emotion = "angry";
+        }
+        button.addEventListener("click", function () {
+            selectAnswer(button);
+            console.log("answer selected!");
+        });
+    });
+}
