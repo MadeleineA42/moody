@@ -174,3 +174,39 @@ function showQuestion() {
         });
     });
 }
+
+function selectAnswer(button) {
+    const selection = button.dataset.emotion;
+
+    if (selection === "happy") {
+        happyPoints += 1;
+        console.log("happy", happyPoints);
+    }
+    if (selection === "sad") {
+        sadPoints += 1;
+        console.log("sad", sadPoints);
+    }
+    if (selection === "stressed") {
+        stressedPoints += 1;
+        console.log("stressed", stressedPoints);
+    }
+    if (selection === "loved") {
+        lovedPoints += 1;
+        console.log("loved", lovedPoints);
+    }
+    if (selection === "angry") {
+        angryPoints += 1;
+        console.log("angry", angryPoints);
+    }
+
+    questionIndex++;
+    if (questionIndex < questionList.length) {
+        showQuestion();
+    } else {
+        answerEl.innerHTML = "";
+        questionEl.innerText = "";
+        getMoodRating();
+        showResults();
+    }
+
+}
