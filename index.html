@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +13,7 @@
       theme: {
         extend: {
           fontFamily: {
-            'cherry': ['Cherry Bomb One', 'cursive'],
+            'smokin': ['Smokum', 'cursive'],
             'quicksand': ['Quicksand', 'sans-serif'],
           },
           colors: {
@@ -30,79 +31,107 @@
   <div class="bg-cover bg-fixed" style='background-image: url("./assets/images/home-background.png")'>
 
     <!-- header text for feelin' moody -->
-    <div class="font-cherry text-7xl text-center py-8">
+  <div class="flex justify-center">
+    <div class="font-smokin text-8xl text-center py-8">
       <!--border and box for feelin' moody  -->
       <span class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-white to to-blue-800 px-8 py-1">
-        Feelin' Moody?
+        Feelin' MOOdy?
       </span>
     </div>
-    <div class="font-cherry text-4xl text-center py-3 mb-32">
-      <!--border and box for feelin' moody  -->
-      <span class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-white to to-blue-800 px-8 py-1">
+  </div>
+
+    <!-- info tab -->
+    <div class="flex justify-center">
+      <div class="font-quicksand font-bold text-center rounded-xl border-solid border-2 border-black bg-violet-300 bg-opacity-70 py-2 px-2 mx-48 mb-2">
+        If you've got your emotions all figured out, give a clickety-clack to one of the buttons next to our utterly delightful MOOdy the cow. If you're as confused as a chicken at a cow convention, saddle up and wrangle with MOOdy's quiz down yonder! 🐄🤠
+      </div>
+    </div>
+
+
+     <!-- header for checkin down below -->
+     <div class="flex justify-center">
+     <div class="font-smokin text-6xl text-center py-4 mb-10">
+      <!--border and box for checking in -->
+      <span class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-blue-800 to to-white px-10 py-1">
         Check-in down below:
       </span>
     </div>
-
-
-
-    <!-- Nav bar with Cow image and buttons -->
-    <div class="flex justify-center">
-      <img class="animate-bounce max-h-screen min-h-screen" src="./assets/images/main-cow.PNG"
-        alt="MOOdy the cow mascot with blue tie">
-
     </div>
 
-
- 
-
-
-
-<!-- <ul>
-        <a href="happy.html">
-          <li button class="moodBtn" id="happybtn">HAPPY 😃</li>
+    <!-- Nav bar with Cow image-->
+    <div class="flex justify-evenly">
+      
+      <img class="hover:animate-bounce mt-8 max-h-screen min-h-screen" src="./assets/images/MOOdyTheCow.PNG" alt="MOOdy the cow mascot with cowboy hat">
+    
+      <!-- Buttons -->
+    <ul>
+        <a href="./src/happy.html">
+          <li class="hover:bg-yellow-400 hover:bg-opacity-70 hover:cursor-grab hover:animate-spin font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 py-2 px-2 mr-52 mt-16 mb-14">HAPPY 😃</li>
         </a>
-        <a href="sad.html">
-          <li button class="moodBtn" id="sadbtn"> SAD 😞</li>
+
+        <a href="./src/sad.html">
+          <li class="hover:bg-blue-600 hover:bg-opacity-70 hover:cursor-grab hover:animate-spin font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 py-2 px-2 mr-52 mb-14"> SAD 😞</li>
         </a>
-        <a href="stressed.html">
-          <li button class="moodBtn" id="stressbtn">STRESSED 😫</li>
+        
+        <a href="./src/stressed.html">
+          <li class="hover:bg-green-500 hover:bg-opacity-70 hover:cursor-grab hover:animate-spin font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 py-2 px-2 mr-52 mb-14">STRESSED 😫</li>
         </a>
-        <a href="angry.html">
-          <li button class="moodBtn" id="angrybtn">ANGRY 😡</li>
+
+        <a href="./src/angry.html">
+          <li class="hover:bg-red-500 hover:bg-opacity-70 hover:cursor-grab hover:animate-spin font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 py-2 px-2 mr-52 mb-14">ANGRY 😡</li>
         </a>
-        <a href="loved.html">
-          <li button class="moodBtn" id="lovebtn">LOVED 😍</li>
+
+        <a href="./src/loved.html">
+          <li class="hover:bg-pink-500 hover:bg-opacity-70 hover:cursor-grab hover:animate-spin font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 py-2 px-2 mr-52 mb-14">LOVED 😍</li>
         </a>
-      </ul>
-    </nav>
-    </header> -->
+    </ul>
+  
+  </div>
 
 
-<!-- Quiz -->
+
+
+    <!-- Quiz -->
+    <div class="flex justify-center text-center pb-32 pt-14 px-64">
+      <container class="bg-blue-700 bg-opacity-50 rounded-xl py-10">
+        <div class="font-smokin text-8xl text-center py-8">
     <header>
-        <h1 class="title">Moody Questionaire 🐮</h1>
-    </header>
-    <main>
-        <h3 id="question">Start the Quiz to Figure out your MOOOOd!</h3>
-        <div id="answers">
-            <button id="start">Start</button>
+          <h1 class="title">Moody Questionaire 🐮</h1>
         </div>
-        <h3 id="results">How is your mood?
-                <p id="happyResult">Happy? *HTML Link*</p>
-                <p id="sadResult">Sad? *HTML Link*</p>
-                <p id="stressedResult">Stressed? *HTML Link*</p>
-                <p id="lovedResult">Loved? *HTML Link*</p>
-                <p id="angryResult">Angry? *HTML Link*</p>
-        </h3>
+    </header>
+    
+    
+    <main>
+      <div class="font-quicksand font-bold  px-2 mb-10">
+      <h3 id="question">Start the Quiz to Figure out your MOOOOd!</h3>
+      </div>
+      <div id="answers">
+
+      <div class="hover:animate-pulse font-smokin text-4xl rounded-xl border-solid border-2 border-black bg-white bg-opacity-80 py-2 px-2 mx-80">
+        <button id="start">Start</button>
+      </div>
+      </div>
+      <h3 id="results">How is your mood?
+        <a href="./src/happy.html"><p id="happyResult">Happy?</p></a>
+        <a href="./src/sad.html"><p id="sadResult">Sad? *HTML Link*</p></a>
+        <a href="./src/stressed.html"><p id="stressedResult">Stressed? *HTML Link*</p></a>
+        <a href="./src/loved.html"><p id="lovedResult">Loved? *HTML Link*</p></a>
+        <a href="./src/angry.html"><p id="angryResult">Angry? *HTML Link*</p></a>
+      </h3>
     </main>
-    <script src="/assets/javascript/script.js"></script>
+    </container>
+    </div>
 
+  
+  
 
+  
 
-
+    <!-- Footer at the bottom page -->
     <footer>
       <div class="flex justify-center">
-        <div class="font-quicksand font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-30 py-2 px-2 mb-5">
+        <div
+          class="font-quicksand font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-30 py-2 px-2 mb-5">
           Made with ❤️ by YM<sub>3</sub>K
         </div>
       </div>
@@ -111,6 +140,7 @@
 
 
   </div>
+  <script src="/assets/javascript/script.js"></script>
 </body>
 
 
