@@ -4,26 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'space': ['Space Grotesk', 'sans-serif']
+            // 'quicksand': ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+
+          }
+        }
+      }
+    }
+  </script>
     <title>I'm sad!</title>
 </head>
 <header>
-    <img src="/assets/images/sad-cow.PNG" alt="sad cow">
+    <a href="/index.html">
+        <img src="/assets/images/sad-cow.PNG" alt="sad cow">
+    </a>
 </header>
-<body class="bg-rose-100">
-    <h1 class="text-3xl font-bold text-rose-800 flex justify-center">Feelin' sad? Let's bring your spirits up.</h1>
-    <main class="text-rose-700 flex justify-center">
+<body class="bg-rose-100 font-space">
+    <h1 class="text-3xl font-bold text-rose-800 flex justify-center">Feelin' sad?</h1>
+    <h2 class="text-rose-700 flex justify-center"> Let's bring your spirits up.</h2>
+    <main class="text-rose-600 flex justify-center">
         <p>
-            <ul>
-                <li>1. Acknowledge Your Feelings: It's okay to feel sad. Denying or suppressing feelings can make them more intense.</li>
-                <li>2. Talk to Someone: Sharing your feelings with a friend, family member, or therapist can provide relief. Sometimes, just being heard can make a big difference.</li>
-                <li>3. Express Yourself: Journaling, art, music, and other forms of creative expression can be therapeutic outlets for sadness.</li>
-                <li>4. Engage in Activities You Enjoy: Doing things you love can act as a distraction and mood booster.</li>
-                <li>5. Stay Active: Physical activity, like walking or yoga, releases endorphins which can boost your mood.</li>
-                <li>6. Avoid Isolation: While it's natural to want to retreat when feeling down, isolating yourself can exacerbate feelings of sadness. Spend time with supportive people, even if it's just a short chat.</li>
-                <li>7. Limit Stress: If possible, try to reduce sources of significant stress, and explore stress-reducing techniques that work for you, like deep breathing or visualization.</li>
-            </ul>
+            <div class="container flex justify-center">
+                <ul>
+                    <li>1. Acknowledge Your Feelings: It's okay to feel sad. Denying or suppressing feeling <br>can make them more intense.</li>
+                    <li>2. Talk to Someone: Sharing your feelings with a friend, family member, or therapist<br> can provide relief. Sometimes, just being heard can make a big difference.</li>
+                    <li>3. Express Yourself: Journaling, art, music, and other forms of creative expression<br> can be therapeutic outlets for sadness.</li>
+                    <li>4. Engage in Activities You Enjoy: Doing things you love can act as<br> a distraction and mood booster.</li>
+                    <li>5. Stay Active: Physical activity, like walking or yoga, releases endorphins which can boost your mood.</li>
+                    <li>6. Avoid Isolation: While it's natural to want to retreat when feeling down, isolating yourself can exacerbate feelings of sadness. Spend time with supportive people, even if it's just a short chat.</li>
+                    <li>7. Limit Stress: If possible, try to reduce sources of significant stress,<br> and explore stress-reducing techniques that work for you, like deep breathing or visualization.</li>
+                </ul>
+            </div>    
         </p>
     </main>
-    <footer class="text-rose-400 flex justify-center">Made with 💙 by the Moody team</footer>
+    <footer class="text-rose-400 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
 </body>
 </html>
