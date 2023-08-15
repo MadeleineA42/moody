@@ -221,7 +221,7 @@ function selectAnswer(button) {
         if (sadPoints >= 3) {
             console.log("You're Sad.");
             happyResult.innerHTML = ""
-            sadResult.innerHTML = '<a href="./src/sad.html"><img src="./assets/images/sad-cow.png" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
+            sadResult.innerHTML = '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
             stressedResult.innerHTML = ""
             lovedResult.innerHTML = ""
             angryResult.innerHTML = ""
@@ -230,7 +230,7 @@ function selectAnswer(button) {
             console.log("You're Stressed!");
             happyResult.innerHTML = ""
             sadResult.innerHTML = ""
-            stressedResult.innerHTML = '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.png" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
+            stressedResult.innerHTML = '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
             lovedResult.innerHTML = ""
             angryResult.innerHTML = ""
         }
@@ -239,7 +239,7 @@ function selectAnswer(button) {
             happyResult.innerHTML = ""
             sadResult.innerHTML = ""
             stressedResult.innerHTML = ""
-            lovedResult.innerHTML = '<a href="./src/loved.html"><img src="./assets/images/loved-cow.png" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
+            lovedResult.innerHTML = '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
             angryResult.innerHTML = ""
         }
         if (angryPoints >= 3) {
@@ -248,7 +248,7 @@ function selectAnswer(button) {
             sadResult.innerHTML = ""
             stressedResult.innerHTML = ""
             lovedResult.innerHTML = ""
-            angryResult.innerHTML = '<a href="./src/angry.html"><img src="assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
+            angryResult.innerHTML = '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
         }
     }
 
