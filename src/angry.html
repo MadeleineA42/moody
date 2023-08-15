@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            'mont': ['Montserrat', sans-serif]
-            // 'quicksand': ['Quicksand', 'sans-serif'],
+<link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'mont': ['Montserrat', 'sans - serif'],
+              'smoke': ['Smokum', 'cursive'],
+              // 'quicksand': ['Quicksand', 'sans-serif'],
+            },
+            colors: {},
           },
-          colors: {
-
-          }
-        }
-      }
-    }
-  </script>
+        },
+      };
+    </script>
     <title>I'm angry</title>
-</head>
-<header>
-    <a href="../index.html">
-        <img class="" src="../assets/images/angry-cow.PNG" alt="MOODy angry"> 
-     </a>
-</header>
-<h1 class="text-3xl text-blue-900 flex justify-center">Feelin' angry? Let's cool down.</h1>
-<body class="bg-cyan-100 font-mont">
-    <main>
-        <h2 class="text-blue-800 flex justify-center">Let's take some steps to chill out.</h2>
-        <p>
-            <ul class="text-blue-700">
-                <li>1. Take a deep breathe. Focus on your breathing.</li>
-                <li>2. If possible, remove yourself from the situation.</li>
-                <li>3. Practice boundary setting and enforce those boundaries.</li>
-                <li>4. If you're experiencing fight or flight symptoms, do a physical activity to bring yourself down. For example, jumping jacks or running in place.</li>
-                <li>5. Click here for soothing meditation sounds.</li>
-            </ul>
-        </p>
-    </main>
-    
-</body>
-<footer class="text-blue-300 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
-</html>
+  </head>
+  <body class="bg-cyan-100 font-mont">
+    <!-- //background image -->
+    <div
+    class="bg-cover bg-center h-screen relative"
+    style="background-image: url('../assets/images/peaceful.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40">
+      <!-- cow image at the top of the page, also a hyperlink  -->
+      <header class="py-4 px-8 flex justify-center">
+        <a href="../index.html">
+          <img class="w-32 h-auto" src="../assets/images/angry-cow.PNG" alt="MOODy angry" />
+        </a>
+      </header>
+      <p class="font-smoke text-xl text-cyan-50 flex justify-center">Click on mOOdy the cow to mosey on home</p>
+      <h1 class="text-5xl text-slate-50 flex justify-center">
+        Feelin' a little <span class="text-red-600">angry?</span> Let's <span class="text-blue-300">coOol</span> down.
+      </h1>
+      <h2 class="text-2xl text-cyan-50 flex justify-center">
+        Let's take some steps to chill out.
+      </h2>
+      <ul class="text-slate-50 text-center">
+        <li>1. Take a deep breathe. Focus on your breathing.</li>
+        <li>2. If possible, remove yourself from the situation.</li>
+        <li>3. Practice boundary setting and enforce those boundaries.</li>
+        <li>4. If you're experiencing fight or flight symptoms, do a physical activity to bring yourself down.<br> For example, jumping jacks or running in place.
+        </li>
+        <li>5. Listen to the music for soothing meditation sounds.</li>
+      </ul>
+      <div class="flex justify-center">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/FjtZMQlN-jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <footer class="text-blue-200 flex justify-center">
+        Made with ❤️ by YM<sub>3</sub>K
+      </footer>
+    </div>
+  </body>
+
+</html> 
