@@ -22,7 +22,7 @@ header {
   background-color: rgba(245, 245, 245, 0.5);
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  height: 200px; /* Increased height to accommodate the cow face */
+  height: 200px; 
 }
 
 h1 {
@@ -40,21 +40,18 @@ h1 {
   width: 150px;
   display: block;
   margin: 0 auto;
-  margin-top: 10px; /* Add margin to position it underneath the text */
+  margin-top: 10px; 
 }
 
 nav {
   background-color: rgba(237, 225, 168, 0.8);
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  text-align: center; /* Center-align the content horizontally */
+  text-align: center; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center-align the content vertically */
+  justify-content: center; 
 }
-
-
-
 
 h2 {
   color: #cb6600;
@@ -63,37 +60,8 @@ h2 {
   text-shadow: 4px 4px 8px rgba(92, 90, 90, 0.519);
 }
 
-form {
-  display: flex;
-  align-items: center;
-}
-
-input[type="text"] {
-  padding: 5px;
-  width: 250px;
-  border: 2px solid #cb6600;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-#search-form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px; /* Adjust margin as needed */
-}
-
-button[type="submit"] {
-  background-color: #cb6600;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Center the videos */
-#video-container {
+/* Center the gifs */
+#gif-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,8 +70,37 @@ button[type="submit"] {
   margin-top: 20px;
 }
 
-/* Size of the videos */
-iframe {
-  width: 280px;
-  height: 157.5px;
+ /* Style for gif images */
+img {
+  width: 100%; 
+  max-width: 300px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+  margin-top: 10px; 
+}
+
+/* Style for generate button */
+#generate-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+  padding-bottom: 20px;
+}
+
+#generate-button {
+  padding: 10px 20px;
+  background-color: #f2601d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  
+}
+
+#generate-button:hover {
+  background-color: #f0fd42;
+  color: rgb(252, 11, 11);
 }

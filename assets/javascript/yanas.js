@@ -1,65 +1,38 @@
-// // Set a cross-site cookie with SameSite=None and Secure
-// function setCrossSiteCookie(name, value, days) {
-//     var expires = days ? `; expires=${new Date(Date.now() + days * 86400000).toUTCString()}` : '';
-//     document.cookie = `${name}=${value}${expires}; path=/; SameSite=Lax; Secure`;
-//   }
-  
-  // API call
-  gapi.load('client', () => {
-    gapi.client.init({
-      apiKey: 'AIzaSyBf6rgXuxtUMPxFJEtNDLxqX2Li_B4TK7I'
-    }).then(() => {
-      return gapi.client.load('youtube', 'v3');
-    }).then(() => {
-      searchFunnyCatVideos()
-        .then(displayAvailableVideos)
-        .catch(error => console.error('Error searching for videos:', error));
-    }).catch(error => {
-      console.error('Error initializing API client:', error);
+// Function to fetch and display random "funny animals" gifs
+function fetchAndDisplayRandomFunnyAnimals() {
+  var cacheBuster = new Date().getTime();
+  var apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=XKxbeiNY4qzJ4OYhGlkWPOP4vyPmOxil&tag=funny+animals&rating=g&lang=en&bundle=messaging_non_clips&cacheBuster=${cacheBuster}`;
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      var randomGIF = [data.data];
+      displayAvailableGIFs(randomGIF);
+    })
+    .catch(error => {
+      console.error('Error fetching random funny animals GIF:', error);
     });
-  });
-  
-  // Search for funny cat videos
-  function searchFunnyCatVideos() {
-    return gapi.client.youtube.search.list({
-      part: 'snippet',
-      q: 'funny animals', // Search specifically for funny cat videos
-      type: 'video', // Only search for video content
-      videoEmbeddable: 'true' // Filter out videos that cannot be embedded
-    });
-  }
-  
+}
 
-function displayAvailableVideos(response) {
-    var videos = response.result.items; // Get all videos from the API response
-    var videoContainer = document.getElementById('video-container');
-  
-    // Clear previous videos
-    videoContainer.innerHTML = '';
-  
-    let displayedVideoCount = 0;
-  
-    videos.forEach(video => {
-      if (displayedVideoCount >= 9) {
-        return; // Displayed the desired number of videos
-      }
-  
-      var videoId = video.id.videoId;
-      var videoStatus = video.snippet.liveBroadcastContent;
-  
-      if (videoStatus !== 'none') { // Check if video is live or scheduled
-        return; // Skip live or scheduled videos
-      }
-  
-      var iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${videoId}`;
-      iframe.width = '280';
-      iframe.height = '157.5';
-      iframe.allowFullscreen = true; 
-      videoContainer.appendChild(iframe);
-  
-      displayedVideoCount++;
-    });
-  }
-  
-  
+// Function to display gifs on the page
+function displayAvailableGIFs(gifs) {
+  var gifContainer = document.getElementById('gif-container');
+  gifContainer.innerHTML = ''; // Clear existing gifs
+  gifs.forEach(gif => {
+    var gifId = gif.id;
+    var gifUrl = gif.images.fixed_height.url;
+    var img = document.createElement('img');
+    img.src = gifUrl;
+    img.width = '280';
+    img.height = '157.5';
+    gifContainer.appendChild(img);
+  });
+}
+
+// Event listener to the generate button
+document.getElementById('generate-button').addEventListener('click', () => {
+  // Fetch and display a random "funny animals" gifs
+  fetchAndDisplayRandomFunnyAnimals();
+});
+
+// Initial call to fetch and display a random "funny animals" gifs when the page loads
+fetchAndDisplayRandomFunnyAnimals();
