@@ -4,22 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'mont': ['Montserrat', sans-serif]
+            // 'quicksand': ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+
+          }
+        }
+      }
+    }
+  </script>
     <title>I'm angry</title>
 </head>
-<h1>Feelin' angry? Let's cool down.</h1>
-<body>
+<header>
+    <a href="/index.html">
+        <img src="/assets/images/angry-cow.PNG">
+     </a>
+</header>
+<h1 class="text-3xl text-blue-900 flex justify-center">Feelin' angry? Let's cool down.</h1>
+<body class="bg-cyan-100 font-mont">
     <main>
-        <p>Let's take some steps to chill out.
-            <ol>
-                <li>Take a deep breathe. Focus on your breathing.</li>
-                <li>If possible, remove yourself from the situation.</li>
-                <li>Practice boundary setting and enforce those boundaries.</li>
-                <li>If you're experiencing fight or flight symptoms, do a physical activity to bring yourself down. For example, jumping jacks or running in place.</li>
-                <li>Click here for soothing meditation sounds.</li>
-            </ol>
+        <h2 class="text-blue-800 flex justify-center">Let's take some steps to chill out.</h2>
+        <p>
+            <ul class="text-blue-700">
+                <li>1. Take a deep breathe. Focus on your breathing.</li>
+                <li>2. If possible, remove yourself from the situation.</li>
+                <li>3. Practice boundary setting and enforce those boundaries.</li>
+                <li>4. If you're experiencing fight or flight symptoms, do a physical activity to bring yourself down. For example, jumping jacks or running in place.</li>
+                <li>5. Click here for soothing meditation sounds.</li>
+            </ul>
         </p>
     </main>
     
 </body>
-<footer>Made with 💙 by the Moody team</footer>
+<footer class="text-blue-300 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
 </html>
