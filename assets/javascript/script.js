@@ -248,7 +248,7 @@ function selectAnswer(button) {
             sadResult.innerHTML = ""
             stressedResult.innerHTML = ""
             lovedResult.innerHTML = ""
-            angryResult.innerHTML = '<a href="./src/angry.html"><img src="./assets/images/angry-cow.png" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
+            angryResult.innerHTML = '<a href="./src/angry.html"><img src="assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
         }
     }
 
