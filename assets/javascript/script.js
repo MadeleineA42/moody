@@ -212,7 +212,7 @@ function selectAnswer(button) {
     function getMoodRating() {
         if (happyPoints >= 3) {
             console.log("You're Happy!");
-            happyResult.innerHTML = "*Happy Link*"
+            happyResult.innerHTML = '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
             sadResult.innerHTML = ""
             stressedResult.innerHTML = ""
             lovedResult.innerHTML = ""
@@ -221,7 +221,7 @@ function selectAnswer(button) {
         if (sadPoints >= 3) {
             console.log("You're Sad.");
             happyResult.innerHTML = ""
-            sadResult.innerHTML = "*Sad Link*"
+            sadResult.innerHTML = '<a href="./src/sad.html"><img src="./assets/images/sad-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
             stressedResult.innerHTML = ""
             lovedResult.innerHTML = ""
             angryResult.innerHTML = ""
@@ -230,7 +230,7 @@ function selectAnswer(button) {
             console.log("You're Stressed!");
             happyResult.innerHTML = ""
             sadResult.innerHTML = ""
-            stressedResult.innerHTML = "*Stressed Link*"
+            stressedResult.innerHTML = '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
             lovedResult.innerHTML = ""
             angryResult.innerHTML = ""
         }
@@ -239,7 +239,7 @@ function selectAnswer(button) {
             happyResult.innerHTML = ""
             sadResult.innerHTML = ""
             stressedResult.innerHTML = ""
-            lovedResult.innerHTML = "*Loved Link*"
+            lovedResult.innerHTML = '<a href="./src/loved.html"><img src="./assets/images/loved-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
             angryResult.innerHTML = ""
         }
         if (angryPoints >= 3) {
@@ -248,7 +248,7 @@ function selectAnswer(button) {
             sadResult.innerHTML = ""
             stressedResult.innerHTML = ""
             lovedResult.innerHTML = ""
-            angryResult.innerHTML = "*Angry Link*"
+            angryResult.innerHTML = '<a href="./src/angry.html"><img src="./assets/images/angry-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
         }
     }
 
