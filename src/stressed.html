@@ -9,12 +9,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
 <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
            'grotesque': ['Bricolage Grotesque', 'sans-serif'],
+           'smoke': ['Smokum', 'cursive'],
             // 'quicksand': ['Quicksand', 'sans-serif'],
           },
           colors: {
@@ -25,31 +29,33 @@
     }
   </script>
 </head>
-    <header>
+    <body class="font-grotesque">
+      <div
+      class="bg-cover bg-center h-screen relative"
+      style="background-image: url('../assets/images/serene.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-40">
+      <header class="py-4 px-8 flex justify-center">
         <a href="../index.html">
-            <img class="stressed-cow" src="../assets/images/stressed-cow.PNG" alt="animated cow in distress" >
-        </a> 
-    </header>
-    <body class="bg-violet-200 font-grotesque">
-        <h1 class="text-3xl font-bold text-violet-800 flex justify-center">
-        Feelin' stressed?
+          <img class="w-32 h-auto" src="../assets/images/stressed-cow.PNG" alt="MOODy angry" />
+        </a>
+      </header>
+      <p class="font-smoke text-xl text-violet-50 flex justify-center">Click on mOOdy the cow to mosey on home</p>
+        <h1 class="text-5xl font-bold text-violet-100 flex justify-center">
+        Feelin' <span class="text-red-600">stressed?</span>
         </h1>
-        <h2 class="text-xl font-bold text-violet-700 flex justify-center">
+        <h2 class="text-2xl font-bold text-violet-50 flex justify-center">
             Let's gain a better outlook together.
         </h2>
-        <main class="flex flex-wrap; text-violet-600">
-            <p>
-                <div class="container flex justify-center">
-                    <ul>
-                        <li>1. Take stock of your environment, if you need to leave your space, do so.</li>
-                        <li>2. Take a walk or sit near a window. Listen to the sounds surrounding you.</li>
-                        <li>3. Do some box breathing. Inhale for 4, hold for 4, exhale for 4. Repeat as necessary. </li>
-                        <li>4. Allow yourself to vent. Journal your feelings or talk to a trusted friend. </li>
-                        <li>5. Practice some grounding techniques.</li>
-                    </ul>
-                </div>
-            </p>
-        </main>
-        <footer class="flex justify-center text-violet-500">Made with ❤️ by YM<sub>3</sub>K</footer>
+                <ul class="text-violet-50 text-center">
+                  <li>1. Take stock of your environment, if you need to leave your space, do so.</li>
+                  <li>2. Take a walk or sit near a window. Listen to the sounds surrounding you.</li>
+                  <li>3. Allow yourself to vent. Journal your feelings or talk to a trusted friend.</li>
+                  <li>4. Do some box breathing. Inhale for 4, hold for 4, exhale for 4. Repeat as necessary. </li>
+                  <li>5. Practice some grounding techniques.</li>
+                </ul>
+            <div class="flex justify-center">
+              <iframe width="400" height="200" src="https://www.youtube.com/embed/gtEg_q_CaeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        <footer class="flex justify-center text-violet-50">Made with ❤️ by YM<sub>3</sub>K</footer>
     </body>
 </html>
