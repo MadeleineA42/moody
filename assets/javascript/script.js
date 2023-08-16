@@ -21,7 +21,7 @@ var angryPoints = 0;
 
 const questionList = [
     {
-        question: "What holiday best describes you?",
+        question: "What holiday describes your current MOOd?",
         answers: [
             { text: "Christmas", happy: true },
             { text: "Tax Day", sad: true },
@@ -31,9 +31,9 @@ const questionList = [
         ],
     },
     {
-        question: "What color best descibes how you feel?",
+        question: "What color descibes your current MOOd",
         answers: [
-            { text: "Yellow", happy: true },
+            { text: "Yellow", happy: true, image: "assets/images/AnswerImgs/Colors/yellow.jpg" },
             { text: "Blue", sad: true },
             { text: "Green", stressed: true },
             { text: "Pink", loved: true },
@@ -41,7 +41,7 @@ const questionList = [
         ],
     },
     {
-        question: "What animal best descibes your mood?",
+        question: "What animal describes your current MOOd?",
         answers: [
             { text: "Dog", happy: true },
             { text: "Donkey", sad: true },
@@ -51,7 +51,7 @@ const questionList = [
         ],
     },
     {
-        question: "What cartoon best describes how you're feeling today?",
+        question: "What cartoon character describes your current MOOd?",
         answers: [
             { text: "Spongebob", happy: true },
             { text: "Eeyore", sad: true },
@@ -61,7 +61,7 @@ const questionList = [
         ],
     },
     {
-        question: "How do you view the glass?",
+        question: "In your current MOOd, how do you view the glass?",
         answers: [
             { text: "Half Full", happy: true },
             { text: "Half Empty", sad: true },
@@ -71,7 +71,7 @@ const questionList = [
         ],
     },
     {
-        question: "What weekday best describes you?",
+        question: "What weekday describes your current MOOd?",
         answers: [
             { text: "Friday", happy: true },
             { text: "Tuesday", sad: true },
@@ -81,7 +81,7 @@ const questionList = [
         ],
     },
     {
-        question: "What type of weather best describes your mood?",
+        question: "What type of weather describes your current MOOd?",
         answers: [
             { text: "Sunny", happy: true },
             { text: "Rainy", sad: true },
@@ -91,7 +91,7 @@ const questionList = [
         ],
     },
     {
-        question: "What's your dream vacation right now?",
+        question: "In your current MOOd, what is your dream vacation?",
         answers: [
             { text: "Beach", happy: true },
             { text: "In a lonely, dark forest", sad: true },
@@ -101,7 +101,7 @@ const questionList = [
         ],
     },
     {
-        question: "If you were a plant, what would you be?",
+        question: "If you were a plant, how would it represent your current MOOd?",
         answers: [
             { text: "Sunflower", happy: true },
             { text: "Charlie Brown Christmas Tree", sad: true },
@@ -111,7 +111,7 @@ const questionList = [
         ],
     },
     {
-        question: "Which dessert best describes you?",
+        question: "Which dessert best describes your current MOOd?",
         answers: [
             { text: "Candy", happy: true },
             { text: "Ice Cream", sad: true },
@@ -121,7 +121,7 @@ const questionList = [
         ],
     },
     {
-        question: "What Movie Genre best describes your mood?",
+        question: "What Movie Genre best describes your current MOOd?",
         answers: [
             { text: "Comedy", happy: true },
             { text: "Drama", sad: true },
@@ -132,9 +132,9 @@ const questionList = [
     },
 ];
 
-endResults.style.display = "none"
+endResults.style.display = "none";
 
-startBtn.addEventListener("click", startQuiz)
+startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
     showQuestion();
     questionIndex = 0;
@@ -143,16 +143,26 @@ function startQuiz() {
 function showQuestion() {
     answerEl.innerHTML = "";
     questionEl.innerText = "";
-    endResults.style.display = "none"
+    endResults.style.display = "none";
 
     let currentQuestion = questionList[questionIndex];
     questionEl.innerText = currentQuestion.question;
 
-    currentQuestion.answers.forEach(answer => {
+    currentQuestion.answers.forEach((answer) => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         answerEl.appendChild(button);
         button.classList.add("btn");
+
+        if (answer.image) {
+            const image = document.createElement("img");
+            image.src = answer.image;
+            image.style.width = "50px"; // Adjust the width as needed
+            image.style.height = "50px"; // Adjust the height as needed
+            // image.alt = answer.text + " Image"; // Alt text for accessibility
+            button.appendChild(image);
+        }
+
         if (answer.happy) {
             button.dataset.emotion = "happy";
         }
@@ -212,73 +222,77 @@ function selectAnswer(button) {
     function getMoodRating() {
         if (happyPoints >= 3) {
             console.log("You're Happy!");
-            happyResult.innerHTML = '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
-            sadResult.innerHTML = ""
-            stressedResult.innerHTML = ""
-            lovedResult.innerHTML = ""
-            angryResult.innerHTML = ""
+            happyResult.innerHTML =
+                '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
+            sadResult.innerHTML = "";
+            stressedResult.innerHTML = "";
+            lovedResult.innerHTML = "";
+            angryResult.innerHTML = "";
         }
         if (sadPoints >= 3) {
             console.log("You're Sad.");
-            happyResult.innerHTML = ""
-            sadResult.innerHTML = '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
-            stressedResult.innerHTML = ""
-            lovedResult.innerHTML = ""
-            angryResult.innerHTML = ""
+            happyResult.innerHTML = "";
+            sadResult.innerHTML =
+                '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
+            stressedResult.innerHTML = "";
+            lovedResult.innerHTML = "";
+            angryResult.innerHTML = "";
         }
         if (stressedPoints >= 3) {
             console.log("You're Stressed!");
-            happyResult.innerHTML = ""
-            sadResult.innerHTML = ""
-            stressedResult.innerHTML = '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
-            lovedResult.innerHTML = ""
-            angryResult.innerHTML = ""
+            happyResult.innerHTML = "";
+            sadResult.innerHTML = "";
+            stressedResult.innerHTML =
+                '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
+            lovedResult.innerHTML = "";
+            angryResult.innerHTML = "";
         }
         if (lovedPoints >= 3) {
             console.log("You're Loved!");
-            happyResult.innerHTML = ""
-            sadResult.innerHTML = ""
-            stressedResult.innerHTML = ""
-            lovedResult.innerHTML = '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
-            angryResult.innerHTML = ""
+            happyResult.innerHTML = "";
+            sadResult.innerHTML = "";
+            stressedResult.innerHTML = "";
+            lovedResult.innerHTML =
+                '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
+            angryResult.innerHTML = "";
         }
         if (angryPoints >= 3) {
             console.log("You're Angry!");
-            happyResult.innerHTML = ""
-            sadResult.innerHTML = ""
-            stressedResult.innerHTML = ""
-            lovedResult.innerHTML = ""
-            angryResult.innerHTML = '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
+            happyResult.innerHTML = "";
+            sadResult.innerHTML = "";
+            stressedResult.innerHTML = "";
+            lovedResult.innerHTML = "";
+            angryResult.innerHTML =
+                '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
         }
     }
 
-    const API_KEY = 'YOUR_API_KEY_HERE';
-const CHANNEL_ID = 'YOUR_CHANNEL_ID_HERE';
+    const API_KEY = "YOUR_API_KEY_HERE";
+    const CHANNEL_ID = "YOUR_CHANNEL_ID_HERE";
 
-// Endpoint to get uploads playlistId from a channel
-const CHANNEL_ENDPOINT = `https://www.googleapis.com/youtube/v3/channels?id=${CHANNEL_ID}&part=contentDetails&key=${API_KEY}`;
+    // Endpoint to get uploads playlistId from a channel
+    const CHANNEL_ENDPOINT = `https://www.googleapis.com/youtube/v3/channels?id=${CHANNEL_ID}&part=contentDetails&key=${API_KEY}`;
 
-// Fetch uploads playlistId from the channel
+    // Fetch uploads playlistId from the channel
     fetch(CHANNEL_ENDPOINT)
-    .then(response => response.json())
-    .then(data => {
-    const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
+        .then((response) => response.json())
+        .then((data) => {
+            const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
 
-    // Endpoint to get videos from the uploads playlist
-    const PLAYLIST_ITEMS_ENDPOINT = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&maxResults=5&part=snippet&key=${API_KEY}`;
+            // Endpoint to get videos from the uploads playlist
+            const PLAYLIST_ITEMS_ENDPOINT = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&maxResults=5&part=snippet&key=${API_KEY}`;
 
-    return fetch(PLAYLIST_ITEMS_ENDPOINT);
-  })
-    .then(response => response.json())
-    .then(data => {
-    console.log(data.items);  // Logs the videos in the uploads playlist
-  })
-    .catch(error => {
-    console.error('Error fetching from YouTube API', error);
-  });
-  
+            return fetch(PLAYLIST_ITEMS_ENDPOINT);
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data.items); // Logs the videos in the uploads playlist
+        })
+        .catch((error) => {
+            console.error("Error fetching from YouTube API", error);
+        });
+
     function showResults() {
         endResults.style.display = "block";
     }
-
 }
