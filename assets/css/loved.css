@@ -53,16 +53,16 @@ nav {
 
 h2 {
   color: #93387f;
-  font-size: 29px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  font-size: 31px;
+  margin-bottom: 50px;
+  padding-top: 60px;
   height: 20px;
   text-shadow: 4px 4px 8px rgba(80, 74, 74, 0.8);
 }
 
 .instructions {
   color: rgba(0, 0, 0, 0.208); 
-  font-size: 20px;
+  font-size: 27px;
   text-align: center;
   margin-bottom: 10px;
   text-shadow: none;
@@ -127,6 +127,10 @@ blockquote {
 
 .save-button, .myfav-button {
   display: none; /* Hhide buttons by default */
+}
+
+#generate-button {
+  margin-bottom: 100px;
 }
 
 #generate-button:hover {
