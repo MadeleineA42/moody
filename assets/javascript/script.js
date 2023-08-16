@@ -19,6 +19,36 @@ var stressedPoints = 0;
 var lovedPoints = 0;
 var angryPoints = 0;
 
+var moodRanks = [
+    {
+        type: "happy",
+        count: 0
+    },
+    {
+        type: "sad",
+        count: 0
+    },
+    {
+        type: "stressed",
+        count: 0
+    },
+    {
+        type: "loved",
+        count: 0
+    },
+    {
+        type: "angry",
+        count: 0
+    },
+    {
+        type: "nervous",
+        count: 0
+    }
+]
+
+//Happy
+//moodRanks[0].count++
+
 const questionList = [
     {
         question: "What holiday describes your current MOOd?",
@@ -185,88 +215,96 @@ function showQuestion() {
     });
 }
 
+function clearMoods () {
+    happyResult.innerHTML = "";
+    sadResult.innerHTML = "";
+    stressedResult.innerHTML = "";
+    lovedResult.innerHTML = "";
+    angryResult.innerHTML = "";
+} 
+
+function updateMoodCount (moodName) {
+    var selectedMood = moodRanks.find(x => x.type === moodName)
+    if (selectedMood) selectedMood.count++
+}
+
+function getMoodRating(mood) {
+    
+    clearMoods();
+    switch (mood.type) {
+        case "happy":
+            //clearMoods();                                   
+            happyResult.innerHTML = '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
+        break;            
+        case "sad":
+            //clearMoods();
+            sadResult.innerHTML = '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
+        break;
+        case "stressed":
+        stressedResult.innerHTML = '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
+        case "loved":
+        lovedResult.innerHTML = '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
+
+        case "angry":
+         angryResult.innerHTML = '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
+
+        default:
+        
+        break;
+    }
+
+    // else if (angryPoints >= 3) {
+    //     console.log("You're Angry!");
+    //     happyResult.innerHTML = "";
+    //     sadResult.innerHTML = "";
+    //     stressedResult.innerHTML = "";
+    //     lovedResult.innerHTML = "";
+    //     angryResult.innerHTML =
+    //         '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
+    // }
+}
+
+
 function selectAnswer(button) {
     const selection = button.dataset.emotion;
 
-    if (selection === "happy") {
-        happyPoints += 1;
-        console.log("happy", happyPoints);
-    }
-    if (selection === "sad") {
-        sadPoints += 1;
-        console.log("sad", sadPoints);
-    }
-    if (selection === "stressed") {
-        stressedPoints += 1;
-        console.log("stressed", stressedPoints);
-    }
-    if (selection === "loved") {
-        lovedPoints += 1;
-        console.log("loved", lovedPoints);
-    }
-    if (selection === "angry") {
-        angryPoints += 1;
-        console.log("angry", angryPoints);
-    }
+    updateMoodCount(selection);
+
+    // if (selection === "happy") {        
+    //     //moodRanks[0].count++
+    //     updateMoodCount("happy")
+    //     console.log("happy", moodRanks[0].count);
+    // }
+    // if (selection === "sad") {
+    //     sadPoints += 1;
+    //     console.log("sad", sadPoints);
+    // }
+    // if (selection === "stressed") {
+    //     stressedPoints += 1;
+    //     console.log("stressed", stressedPoints);
+    // }
+    // if (selection === "loved") {
+    //     lovedPoints += 1;
+    //     console.log("loved", lovedPoints);
+    // }
+    // if (selection === "angry") {
+    //     angryPoints += 1;
+    //     console.log("angry", angryPoints);
+    // }
 
     questionIndex++;
     if (questionIndex < questionList.length) {
         showQuestion();
     } else {
+        moodRanks.sort((a, b) => parseFloat(b.count) - parseFloat(a.count))
         answerEl.innerHTML = "";
         questionEl.innerText = "";
-        getMoodRating();
+        getMoodRating(moodRanks[0]);
         showResults();
     }
 
-    function getMoodRating() {
-        if (happyPoints >= 3) {
-            console.log("You're Happy!");
-            happyResult.innerHTML =
-                '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
-            sadResult.innerHTML = "";
-            stressedResult.innerHTML = "";
-            lovedResult.innerHTML = "";
-            angryResult.innerHTML = "";
-        }
-        else if (sadPoints >= 3) {
-            console.log("You're Sad.");
-            happyResult.innerHTML = "";
-            sadResult.innerHTML =
-                '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
-            stressedResult.innerHTML = "";
-            lovedResult.innerHTML = "";
-            angryResult.innerHTML = "";
-        }
-        else if (stressedPoints >= 3) {
-            console.log("You're Stressed!");
-            happyResult.innerHTML = "";
-            sadResult.innerHTML = "";
-            stressedResult.innerHTML =
-                '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
-            lovedResult.innerHTML = "";
-            angryResult.innerHTML = "";
-        }
-        else if (lovedPoints >= 3) {
-            console.log("You're Loved!");
-            happyResult.innerHTML = "";
-            sadResult.innerHTML = "";
-            stressedResult.innerHTML = "";
-            lovedResult.innerHTML =
-                '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
-            angryResult.innerHTML = "";
-        }
-        else if (angryPoints >= 3) {
-            console.log("You're Angry!");
-            happyResult.innerHTML = "";
-            sadResult.innerHTML = "";
-            stressedResult.innerHTML = "";
-            lovedResult.innerHTML = "";
-            angryResult.innerHTML =
-                '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
-        }
-    }
-
+    
+   
     // const API_KEY = "YOUR_API_KEY_HERE";
     // const CHANNEL_ID = "YOUR_CHANNEL_ID_HERE";
 
