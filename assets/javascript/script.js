@@ -229,7 +229,7 @@ function selectAnswer(button) {
             lovedResult.innerHTML = "";
             angryResult.innerHTML = "";
         }
-        if (sadPoints >= 3) {
+        else if (sadPoints >= 3) {
             console.log("You're Sad.");
             happyResult.innerHTML = "";
             sadResult.innerHTML =
@@ -238,7 +238,7 @@ function selectAnswer(button) {
             lovedResult.innerHTML = "";
             angryResult.innerHTML = "";
         }
-        if (stressedPoints >= 3) {
+        else if (stressedPoints >= 3) {
             console.log("You're Stressed!");
             happyResult.innerHTML = "";
             sadResult.innerHTML = "";
@@ -247,7 +247,7 @@ function selectAnswer(button) {
             lovedResult.innerHTML = "";
             angryResult.innerHTML = "";
         }
-        if (lovedPoints >= 3) {
+        else if (lovedPoints >= 3) {
             console.log("You're Loved!");
             happyResult.innerHTML = "";
             sadResult.innerHTML = "";
@@ -256,7 +256,7 @@ function selectAnswer(button) {
                 '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
             angryResult.innerHTML = "";
         }
-        if (angryPoints >= 3) {
+        else if (angryPoints >= 3) {
             console.log("You're Angry!");
             happyResult.innerHTML = "";
             sadResult.innerHTML = "";
@@ -267,30 +267,30 @@ function selectAnswer(button) {
         }
     }
 
-    const API_KEY = "YOUR_API_KEY_HERE";
-    const CHANNEL_ID = "YOUR_CHANNEL_ID_HERE";
+    // const API_KEY = "YOUR_API_KEY_HERE";
+    // const CHANNEL_ID = "YOUR_CHANNEL_ID_HERE";
 
-    // Endpoint to get uploads playlistId from a channel
-    const CHANNEL_ENDPOINT = `https://www.googleapis.com/youtube/v3/channels?id=${CHANNEL_ID}&part=contentDetails&key=${API_KEY}`;
+    // // Endpoint to get uploads playlistId from a channel
+    // const CHANNEL_ENDPOINT = `https://www.googleapis.com/youtube/v3/channels?id=${CHANNEL_ID}&part=contentDetails&key=${API_KEY}`;
 
-    // Fetch uploads playlistId from the channel
-    fetch(CHANNEL_ENDPOINT)
-        .then((response) => response.json())
-        .then((data) => {
-            const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
+    // // Fetch uploads playlistId from the channel
+    // fetch(CHANNEL_ENDPOINT)
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
 
-            // Endpoint to get videos from the uploads playlist
-            const PLAYLIST_ITEMS_ENDPOINT = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&maxResults=5&part=snippet&key=${API_KEY}`;
+    //         // Endpoint to get videos from the uploads playlist
+    //         const PLAYLIST_ITEMS_ENDPOINT = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&maxResults=5&part=snippet&key=${API_KEY}`;
 
-            return fetch(PLAYLIST_ITEMS_ENDPOINT);
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data.items); // Logs the videos in the uploads playlist
-        })
-        .catch((error) => {
-            console.error("Error fetching from YouTube API", error);
-        });
+    //         return fetch(PLAYLIST_ITEMS_ENDPOINT);
+    //     })
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         console.log(data.items); // Logs the videos in the uploads playlist
+    //     })
+    //     .catch((error) => {
+    //         console.error("Error fetching from YouTube API", error);
+    //     });
 
     function showResults() {
         endResults.style.display = "block";
