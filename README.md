@@ -4,4 +4,5 @@ Welcome to Moody! Our goal with this page is to help boost an individuals mood. 
 Each mood will have a dedicated page that captures the unique styling of the feeling. On each page, the user will be presented with relaxing music (via Youtube), inspirational/motivational quotes and gifs via giphys.
 
 
-<!-- screenshot of main page here -->
+<img src="assets/images/top-main.png" alt="top of main page of site">
+<img src="assets/images/moody-main.png" alt="screenshot of main page>"
