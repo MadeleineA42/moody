@@ -24,6 +24,17 @@
     }
   </script>
   <title>Feelin' Moody</title>
+  <style>
+    .btn {
+      color: white;
+      border: 2px solid #333;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 8px;
+      background-color: rgb(107, 174, 215, 0.7);
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,133 +42,154 @@
   <div class="bg-cover bg-fixed" style='background-image: url("./assets/images/home-background.png")'>
 
     <!-- header text for feelin' moody -->
-  <div class="flex justify-center">
-    <div class="font-smokin text-[9vw] text-center py-[2vh]">
-      <!--border and box for feelin' moody  -->
-      <span class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-white to to-blue-700 px-8 py-1">
-        Feelin' MOOdy?
-      </span>
+    <div class="flex justify-center">
+      <div class="font-smokin text-[9vw] text-center py-[2vh]">
+        <!--border and box for feelin' moody  -->
+        <span
+          class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-white to to-blue-700 px-8 py-1">
+          Feelin' MOOdy?
+        </span>
+      </div>
     </div>
-  </div>
 
     <!-- info tab -->
     <div class="flex justify-center">
-      <div class="font-quicksand font-bold text-[1.5vw] text-center rounded-xl border-solid border-2 border-black bg-stone-300 bg-opacity-60 py-[2vh] px-2 mx-[20vw] mb-2">
-        ⭐ If you've got your emotions all figured out, give a clickety-clack to one of the buttons next to our utterly delightful MOOdy the cow. <br> ⭐ If you're as confused as a chicken at a cow convention, saddle up and wrangle with MOOdy's quiz down yonder! 🐄🤠
+      <div
+        class="font-quicksand font-bold text-[1.5vw] text-center rounded-xl border-solid border-2 border-black bg-stone-300 bg-opacity-60 py-[2vh] px-2 mx-[20vw] mb-2">
+        ⭐ If you've got your emotions all figured out, give a clickety-clack to one of the buttons next to our utterly
+        delightful MOOdy the cow. <br> ⭐ If you're as confused as a chicken at a cow convention, saddle up and wrangle
+        with MOOdy's quiz down yonder! 🐄🤠
       </div>
     </div>
 
 
-     <!-- header for checkin down below -->
-     <div class="flex justify-center">
-     <div class="font-smokin text-[5vw] text-center py-[2vh] mb-[5vw]">
-      <!--border and box for checking in -->
-      <span class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-blue-700 to to-white px-10 py-1">
-        Check-in down below:
-      </span>
-    </div>
+    <!-- header for checkin down below -->
+    <div class="flex justify-center">
+      <div class="font-smokin text-[5vw] text-center py-[2vh] mb-[5vw]">
+        <!--border and box for checking in -->
+        <span
+          class="rounded-xl border-solid border-2 border-black bg-gradient-to-r from-blue-700 to to-white px-10 py-1">
+          Check-in down below:
+        </span>
+      </div>
     </div>
 
 
     <!-- Nav bar with Cow image-->
     <div class="flex flex-shrink justify-center">
 
-      
-        <img class="max-h-[100vh] hover:animate-bounce mt-4 md:mt-0" src="./assets/images/MOOdyTheCow.PNG" alt="MOOdy the cow mascot with cowboy hat">
-     
 
-    
+      <img class="max-h-[100vh] hover:animate-bounce mt-4 md:mt-0" src="./assets/images/MOOdyTheCow.PNG"
+        alt="MOOdy the cow mascot with cowboy hat">
+
+
+
       <!-- Buttons -->
-      
-    <ul class="flex flex-col text-base md:text-2xl">
+
+      <ul class="flex flex-col text-base md:text-2xl">
         <a href="./src/happy.html">
-          <li class="hover:bg-yellow-400 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-4 mt-10">
-        
+          <li
+            class="hover:bg-yellow-400 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-4 mt-10">
+
             <div class="flex flex-row flex-wrap justify-center items-center">
               HAPPY
               <img class="w-28 h-auto" src="./assets/images/happy-cow.png">
             </div>
-        
+
           </li>
         </a>
 
         <a href="./src/sad.html">
-          <li class="hover:bg-blue-800 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-4">
+          <li
+            class="hover:bg-blue-800 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-4">
             <div class="flex flex-row flex-wrap justify-center items-center">
               SAD
               <img class="w-28 h-auto" src="./assets/images/sad-cow.PNG">
             </div>
           </li>
         </a>
-        
+
         <a href="./src/stressed.html">
-          <li class="hover:bg-green-600 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 px-[2vw] mb-4">
+          <li
+            class="hover:bg-green-600 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 px-[2vw] mb-4">
             <div class="flex flex-row flex-wrap justify-center items-center">
               STRESSED
-              <img class="w-28 h-auto" src="./assets/images/stressed-cow.PNG"></div></li>
+              <img class="w-28 h-auto" src="./assets/images/stressed-cow.PNG">
+            </div>
+          </li>
         </a>
 
         <a href="./src/angry.html">
-          <li class="hover:bg-red-600 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-4">
+          <li
+            class="hover:bg-red-600 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-4">
             <div class="flex flex-row flex-wrap justify-center items-center">
               ANGRY
-              <img class="w-28 h-auto" src="./assets/images/angry-cow.PNG"></div></li>
+              <img class="w-28 h-auto" src="./assets/images/angry-cow.PNG">
+            </div>
+          </li>
         </a>
 
         <a href="./src/loved.html">
-          <li class="hover:bg-pink-300 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-6">
+          <li
+            class="hover:bg-pink-300 hover:bg-opacity-70 hover:cursor-grab hover:animate-pulse font-quicksand text-center font-bold rounded-xl border-solid border-2 border-black bg-white bg-opacity-50 mb-6">
             <div class="flex flex-row flex-wrap justify-center items-center">
               LOVED
-              <img class="w-28 h-auto" src="./assets/images/loved-cow.PNG"></div></li>
+              <img class="w-28 h-auto" src="./assets/images/loved-cow.PNG">
+            </div>
+          </li>
         </a>
-    </ul>
-    
-  </div>
+      </ul>
 
-  
- 
+    </div>
+
+
+
 
     <!-- Quiz -->
     <div class="flex justify-center">
-        <div class="border-solid border-2 border-black bg-stone-300 bg-opacity-60 text-center rounded-xl pb-[5vh] px-[2vw] mx-[10vw] my-[5vh]">
+      <div
+        class="border-solid border-2 border-black bg-stone-300 bg-opacity-60 text-center rounded-xl pb-[5vh] px-[2vw] mx-[10vw] my-[5vh]">
         <div class="font-smokin text-[8vw] text-center py-[1vh]">
-    <header>
-          <h1 class="title">Moody Questionaire <br> <div class="text-[5vw] mb-[3vw]"> 🐮</div>
-          </h1>
+          <header>
+            <h1 class="title">Moody Questionaire <br>
+              <div class="text-[5vw] mb-[3vw]"> 🐮</div>
+            </h1>
         </div>
-    </header>
-    
-    
-    <main>
-      <div class="flex flex-wrap justify-center font-quicksand font-bold text-[3vw] mx-[10vw] mb-[3vw]">
-      <h3 id="question">Start the Quiz to Figure out your <br> MOOOOd!</h3>
-      </div>
-      <div class="flex flex-col font-smokin text-[2.5vw]" id="answers">
-    
+        </header>
 
 
-    <div class="font-smokin text-[2.5vw] rounded-xl border-solid border-2 border-black bg-white bg-opacity-80 py-2 mx-[28vw] hover:border-dotted hover:bg-stone-500">
+        <main>
+          <div class="flex flex-wrap justify-center font-quicksand font-bold text-[3vw] mx-[10vw] mb-[3vw]">
+            <h3 id="question">Start the Quiz to Figure out your <br> MOOOOd!</h3>
+          </div>
+          <div class="flex flex-col font-smokin text-[2.5vw]" id="answers">
+
+
+
+            <div
+              class="font-smokin text-[2.5vw] rounded-xl border-solid border-2 border-black bg-white bg-opacity-80 py-2 mx-[28vw] hover:border-dotted hover:bg-stone-500">
               <button id="start">Start</button>
-    </div>
-    </div>
-    
-  
-      <h3 class="font-smokin text-[3vw]" id="results">Well now, if y'all mosey on over and give MOOdy a good ol' click,<br> it'll whisk you away to the page you're aimin' to see!
-        <div class="flex justify-center hover:animate-spin">
-        <p id="happyResult">Happy</p>
-        <p id="sadResult">Sad? *HTML Link*</p>
-        <p id="stressedResult">Stressed? *HTML Link*</p>
-        <p id="lovedResult">Loved? *HTML Link*</p>
-        <p id="angryResult">Angry? *HTML Link*</p>
-        </div>
-      </h3>
-    </main>
+            </div>
+          </div>
+
+
+          <h3 class="font-smokin text-[3vw]" id="results">Well now, if y'all mosey on over and give MOOdy a good ol'
+            click,<br> it'll whisk you away to the page you're aimin' to see!
+            <div class="flex justify-center hover:animate-spin">
+              <p id="happyResult">Happy</p>
+              <p id="sadResult">Sad? *HTML Link*</p>
+              <p id="stressedResult">Stressed? *HTML Link*</p>
+              <p id="lovedResult">Loved? *HTML Link*</p>
+              <p id="angryResult">Angry? *HTML Link*</p>
+            </div>
+          </h3>
+        </main>
       </div>
     </div>
 
- 
 
-  
+
+
 
     <!-- Footer at the bottom page -->
     <footer>

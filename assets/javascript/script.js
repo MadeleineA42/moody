@@ -33,7 +33,7 @@ const questionList = [
     {
         question: "What color descibes your current MOOd",
         answers: [
-            { text: "Yellow", happy: true, image: "assets/images/AnswerImgs/Colors/yellow.jpg" },
+            { text: "Yellow", happy: true, },
             { text: "Blue", sad: true },
             { text: "Green", stressed: true },
             { text: "Pink", loved: true },
@@ -153,16 +153,6 @@ function showQuestion() {
         button.innerHTML = answer.text;
         answerEl.appendChild(button);
         button.classList.add("btn");
-
-        if (answer.image) {
-            const image = document.createElement("img");
-            image.src = answer.image;
-            image.style.width = "50px"; // Adjust the width as needed
-            image.style.height = "50px"; // Adjust the height as needed
-            // image.alt = answer.text + " Image"; // Alt text for accessibility
-            button.appendChild(image);
-        }
-
         if (answer.happy) {
             button.dataset.emotion = "happy";
         }
@@ -266,31 +256,6 @@ function selectAnswer(button) {
                 '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-96"></a>';
         }
     }
-
-    // const API_KEY = "YOUR_API_KEY_HERE";
-    // const CHANNEL_ID = "YOUR_CHANNEL_ID_HERE";
-
-    // // Endpoint to get uploads playlistId from a channel
-    // const CHANNEL_ENDPOINT = `https://www.googleapis.com/youtube/v3/channels?id=${CHANNEL_ID}&part=contentDetails&key=${API_KEY}`;
-
-    // // Fetch uploads playlistId from the channel
-    // fetch(CHANNEL_ENDPOINT)
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
-
-    //         // Endpoint to get videos from the uploads playlist
-    //         const PLAYLIST_ITEMS_ENDPOINT = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&maxResults=5&part=snippet&key=${API_KEY}`;
-
-    //         return fetch(PLAYLIST_ITEMS_ENDPOINT);
-    //     })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         console.log(data.items); // Logs the videos in the uploads playlist
-    //     })
-    //     .catch((error) => {
-    //         console.error("Error fetching from YouTube API", error);
-    //     });
 
     function showResults() {
         endResults.style.display = "block";
