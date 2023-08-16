@@ -223,7 +223,7 @@ function selectAnswer(button) {
         if (happyPoints >= 3) {
             console.log("You're Happy!");
             happyResult.innerHTML =
-                '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-64"></a>';
+                '<a href="./src/happy.html"><img src="./assets/images/happy-cow.png" alt="Happy MOOdy" class="max-w-full h-auto w-96"></a>';
             sadResult.innerHTML = "";
             stressedResult.innerHTML = "";
             lovedResult.innerHTML = "";
@@ -233,7 +233,7 @@ function selectAnswer(button) {
             console.log("You're Sad.");
             happyResult.innerHTML = "";
             sadResult.innerHTML =
-                '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-64"></a>';
+                '<a href="./src/sad.html"><img src="./assets/images/sad-cow.PNG" alt="Sad MOOdy" class="max-w-full h-auto w-96"></a>';
             stressedResult.innerHTML = "";
             lovedResult.innerHTML = "";
             angryResult.innerHTML = "";
@@ -243,7 +243,7 @@ function selectAnswer(button) {
             happyResult.innerHTML = "";
             sadResult.innerHTML = "";
             stressedResult.innerHTML =
-                '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-64"></a>';
+                '<a href="./src/stressed.html"><img src="./assets/images/stressed-cow.PNG" alt="Stressed MOOdy" class="max-w-full h-auto w-96"></a>';
             lovedResult.innerHTML = "";
             angryResult.innerHTML = "";
         }
@@ -253,7 +253,7 @@ function selectAnswer(button) {
             sadResult.innerHTML = "";
             stressedResult.innerHTML = "";
             lovedResult.innerHTML =
-                '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-64"></a>';
+                '<a href="./src/loved.html"><img src="./assets/images/loved-cow.PNG" alt="Loved MOOdy" class="max-w-full h-auto w-96"></a>';
             angryResult.innerHTML = "";
         }
         else if (angryPoints >= 3) {
@@ -263,7 +263,7 @@ function selectAnswer(button) {
             stressedResult.innerHTML = "";
             lovedResult.innerHTML = "";
             angryResult.innerHTML =
-                '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-64"></a>';
+                '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-96"></a>';
         }
     }
 
