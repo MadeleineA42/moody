@@ -113,7 +113,7 @@ blockquote {
 
 #generate-button,
 .save-button, .myfav-button {
-  height: 50px;
+  height: 60px;
   width: 100px;
   background-color: #93387f;
   color: white;
@@ -127,6 +127,21 @@ blockquote {
 
 .save-button, .myfav-button {
   display: none; /* Hhide buttons by default */
+}
+
+#generate-button:hover {
+  background-color: #f0fd42;
+  color: rgb(252, 11, 11);
+}
+
+#save-button:hover {
+  background-color: #f0fd42;
+  color: rgb(252, 11, 11);
+}
+
+#myfav-button:hover {
+  background-color: #f0fd42;
+  color: rgb(252, 11, 11);
 }
 
 /* saved quotes container */

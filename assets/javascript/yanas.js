@@ -7,6 +7,9 @@ function fetchAndDisplayRandomFunnyAnimals() {
     .then(data => {
       var randomGIF = [data.data];
       displayAvailableGIFs(randomGIF);
+      
+      // Hide the instructions after fetching and displaying GIFs
+      document.querySelector('.instructions').style.display = 'none';
     })
     .catch(error => {
       console.error('Error fetching random funny animals GIF:', error);
@@ -30,9 +33,14 @@ function displayAvailableGIFs(gifs) {
 
 // Event listener to the generate button
 document.getElementById('generate-button').addEventListener('click', () => {
-  // Fetch and display a random "funny animals" gifs
+  // Fetch and display a random "funny animals" gif
   fetchAndDisplayRandomFunnyAnimals();
+
+  // Show the GIF container after clicking the button
+  document.getElementById('gif-container').style.display = 'block';
 });
 
-// Initial call to fetch and display a random "funny animals" gifs when the page loads
-fetchAndDisplayRandomFunnyAnimals();
+// Hide the GIF container initially
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('gif-container').style.display = 'none';
+});
