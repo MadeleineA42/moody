@@ -190,3 +190,9 @@ blockquote {
   border-radius: 4px;
   display: none;
 }
+
+footer {
+  color: #93387f;
+  text-align: center;
+  padding: 10px;
+}
