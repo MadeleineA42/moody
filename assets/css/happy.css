@@ -114,3 +114,9 @@ img {
   background-color: #f0fd42;
   color: rgb(252, 11, 11);
 }
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
