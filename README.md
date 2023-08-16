@@ -13,7 +13,7 @@ Each mood will have a dedicated page that captures the unique styling of the fee
 Madeleine Abraham- <a href="https://github.com/MadeleineA42">MadeleineA42</a><br>
 Katie Waters- <a href="https://github.com/kwaters3">kwaters3</a><br>
 Yana Mishyna- <a href="https://github.com/Ymishyna">Ymishyna</a><br>
-Marcus Matthews- <a href="https://github.com/Matthuu75">Matthuu75/a><br>
+Marcus Matthews- <a href="https://github.com/Matthuu75">Matthuu75</a><br>
 Mike Reilly- <a href="https://github.com/MikeRei89">MikeRei89</a><br>
 This team did a great job with collaboration execution! 
 
