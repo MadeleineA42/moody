@@ -7,12 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
 <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            'space': ['Space Grotesk', 'sans-serif']
+            'space': ['Space Grotesk', 'sans-serif'],
+            'smoke': ['Smokum', 'cursive'],
             // 'quicksand': ['Quicksand', 'sans-serif'],
           },
           colors: {
@@ -24,19 +28,24 @@
   </script>
     <title>I'm sad!</title>
 </head>
-<header>
+<body class="text-pink-50 font-space">
+  <div
+  class="bg-cover bg-center h-screen relative"
+  style="background-image: url('../assets/images/relaxing.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-40">
+  <header class="py-4 px-8 flex justify-center">
     <a href="../index.html">
-        <img src="../assets/images/sad-cow.PNG" alt="sad cow">
+      <img class="w-32 h-auto" src="../assets/images/sad-cow.PNG" alt="sad cow" />
     </a>
-</header>
-<body class="bg-rose-100 font-space">
-    <h1 class="text-3xl font-bold text-rose-800 flex justify-center">Feelin' sad?</h1>
-    <h2 class="text-rose-700 flex justify-center"> Let's bring your spirits up.</h2>
+  </header>
+  <p class="font-smoke text-xl text-pink-50 flex justify-center">Click on mOOdy the cow to mosey on home</p>
+    <h1 class="text-5xl font-bold text-rose-50 flex justify-center">Feelin' <span class="text-blue-400">sad?</span></h1>
+    <h2 class="text-yellow-50 flex justify-center"> Let's bring your spirits up.</h2>
     <main class="text-rose-600 flex justify-center">
         <p>
-            <div class="container flex justify-center">
-                <ul>
-                    <li>1. Acknowledge Your Feelings: It's okay to feel sad. Denying or suppressing feeling <br>can make them more intense.</li>
+            <div>
+                <ul class="text-pink-50 text-center">
+                    <li>1. Acknowledge Your Feelings: It's okay to feel sad. Denying or suppressing feelings <br>can make them more intense.</li>
                     <li>2. Talk to Someone: Sharing your feelings with a friend, family member, or therapist<br> can provide relief. Sometimes, just being heard can make a big difference.</li>
                     <li>3. Express Yourself: Journaling, art, music, and other forms of creative expression<br> can be therapeutic outlets for sadness.</li>
                     <li>4. Engage in Activities You Enjoy: Doing things you love can act as<br> a distraction and mood booster.</li>
@@ -47,6 +56,9 @@
             </div>    
         </p>
     </main>
-    <footer class="text-rose-400 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
+    <div class="flex justify-center">
+      <iframe width="400" height="200" src="https://www.youtube.com/embed/RogITE1plk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <footer class="text-rose-200 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
 </body>
 </html>
