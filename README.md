@@ -6,16 +6,20 @@ Each mood will have a dedicated page that captures the unique styling of the fee
 
 <img src="assets/images/top-main.png" alt="top of main page of site">
 <img src="assets/images/moody-main.png" alt="screenshot of main page">
+<img src="assets/images/quiz-screenshot.png" alt="mood quiz screenshot">
 
 
-##Authors of this project:
-Madeleine Abraham- <a href="https://github.com/MadeleineA42">MadeleineA42</a>
-Katie Waters- <a href="https://github.com/kwaters3">kwaters3</a>
-Yana Mishyna- <a href="https://github.com/Ymishyna">Ymishyna</a>
-Marcus Matthews- <a href="https://github.com/Matthuu75">Matthuu75/a>
-Mike Reilly- <a href="https://github.com/MikeRei89">MikeRei89</a>
+## Authors of this project:
+Madeleine Abraham- <a href="https://github.com/MadeleineA42">MadeleineA42</a><br>
+Katie Waters- <a href="https://github.com/kwaters3">kwaters3</a><br>
+Yana Mishyna- <a href="https://github.com/Ymishyna">Ymishyna</a><br>
+Marcus Matthews- <a href="https://github.com/Matthuu75">Matthuu75/a><br>
+Mike Reilly- <a href="https://github.com/MikeRei89">MikeRei89</a><br>
 This team did a great job with collaboration execution! 
 
 
-##Link to deployed site
+## Link to deployed site
 https://madeleinea42.github.io/moody/
+
+## Project status
+This was a really fun assignment to work on through the UCF fullstack coding bootcamp. Since this was an assignment, this particular webpage will be maintained by the original authors.  
