@@ -35,12 +35,38 @@ h1 {
   text-shadow: 4px 4px 8px rgba(218, 27, 252, 0.796);
   font-family: 'Great Vibes', cursive;
 }
+/* allows font to shrink when screen size decreases  */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+}
 
 .loved-cow {
   height: 120px;
   width: 150px;
 }
+/* media query for medium screens  */
+@media (max-width: 768px) {
+  .loved-cow {
+    height: 90px;
+    width: 112.5px;
+  }
+}
 
+/* Media query for small screens */
+@media (max-width: 480px) {
+  .loved-cow {
+    height: 60px;
+    width: 75px;
+  }
+}
 
 nav {
   background-color: rgba(235, 198, 243, 0.509);
@@ -61,6 +87,19 @@ h2 {
   height: 20px;
   text-shadow: 4px 4px 8px rgba(80, 74, 74, 0.8);
 }
+/* sets it up so the font size decreases when the screen decreases  */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 
 .instructions {
   color: rgba(0, 0, 0, 0.208); 
@@ -68,6 +107,19 @@ h2 {
   text-align: center;
   margin-bottom: 10px;
   text-shadow: none;
+}
+/* allows font to decrease when screen size decreases */
+@media (max-width: 768px) {
+  .instructions {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .instructions {
+    font-size: 16px;
+  }
 }
 
 .quote-container {
