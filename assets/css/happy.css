@@ -35,10 +35,36 @@ h1 {
   text-shadow: 2px 2px 4px rgba(252, 233, 27, 0.796);
   font-family: 'Dancing Script', cursive;
 }
+/* allows font to shrink when screen size decreases  */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+}
 
 .happy-cow {
   height: 120px;
   width: 150px;
+}
+/* cow will shrink when screen size shrinks  */
+@media (max-width: 768px) {
+  .happy-cow {
+    height: 90px;
+    width: 112.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .happy-cow {
+    height: 60px;
+    width: 75px;
+  }
 }
 
 nav {
