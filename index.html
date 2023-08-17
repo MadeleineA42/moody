@@ -5,12 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
+          screens: {
+            'sm': '375',
+
+            'md': '1024',
+
+            'lg': 
+          }
         extend: {
           fontFamily: {
             'smokin': ['Smokum', 'cursive'],
@@ -146,19 +152,16 @@
 
 
     <!-- Quiz -->
+  <main>
     <div class="flex justify-center">
-      <div
-        class="border-solid border-2 border-black bg-stone-300 bg-opacity-60 text-center rounded-xl pb-[5vh] px-[2vw] mx-[10vw] my-[5vh]">
+      <div class="border-solid border-2 border-black bg-stone-300 bg-opacity-60 text-center rounded-xl pb-[5vh] px-[2vw] mx-[10vw] my-[5vh]">
         <div class="font-smokin text-[8vw] text-center py-[1vh]">
-          <header>
             <h1 class="title">Moody Questionaire <br>
               <div class="text-[5vw] mb-[3vw]"> 🐮</div>
             </h1>
         </div>
-        </header>
-
-
-        <main>
+        
+    
           <div class="flex flex-wrap justify-center font-quicksand font-bold text-[3vw] mx-[10vw] mb-[3vw]">
             <h3 id="question">Start the Quiz to Figure out your <br> MOOOOd!</h3>
           </div>
@@ -183,10 +186,9 @@
               <p id="angryResult">Angry? *HTML Link*</p>
             </div>
           </h3>
-        </main>
       </div>
     </div>
-
+  </main>
 
 
 

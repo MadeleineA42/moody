@@ -1,4 +1,4 @@
-## MOOdy
+# MOOdy
 Welcome to Moody! Our goal with this page is to help boost an individuals mood. On the homepage the user is presented with two options. If the user knows their mood, they are presented with various links to aid them. If the user is unsure of their mood, they are presented with a short quiz to help determine their mood.
 
 Each mood will have a dedicated page that captures the unique styling of the feeling. On each page, the user will be presented with relaxing music (via Youtube), inspirational/motivational quotes and gifs (via giphys).
@@ -8,13 +8,13 @@ Each mood will have a dedicated page that captures the unique styling of the fee
 <img src="assets/images/moody-main.png" alt="screenshot of main page">
 <img src="assets/images/quiz-screenshot.png" alt="mood quiz screenshot">
 
-## User Story
+# User Story
 
 AS A user
 I WANT to boost my mood that I am in right now
-SO that I can feel even more better overall 
+SO that I can feel better overall. 
 
-## Acceptance Criteria
+# Acceptance Criteria:
 
 # Mood Selection and Display:
 
