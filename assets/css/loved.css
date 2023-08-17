@@ -52,7 +52,7 @@ h1 {
   height: 120px;
   width: 150px;
 }
-/* media query for medium screens  */
+/* cow will shrink when screen shrinks  */
 @media (max-width: 768px) {
   .loved-cow {
     height: 90px;
@@ -60,7 +60,6 @@ h1 {
   }
 }
 
-/* Media query for small screens */
 @media (max-width: 480px) {
   .loved-cow {
     height: 60px;
