@@ -31,7 +31,7 @@ const questionList = [
         ],
     },
     {
-        question: "What color descibes your current MOOd",
+        question: "What color descibes your current MOOd?",
         answers: [
             { text: "Pink", loved: true },
             { text: "Yellow", happy: true, },
