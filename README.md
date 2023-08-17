@@ -14,16 +14,15 @@ AS A user
 I WANT to boost my mood that I am in right now
 SO that I can feel better overall. 
 
-# Acceptance Criteria
 
-## Mood Selection and Display:
+# Mood Selection and Display:
 
 GIVEN a mood app with mood categories,
 WHEN I select a mood category (e.g., "Happy," "Sad"),
 THEN I am presented with content and activities associated with that mood,
 AND the selected mood is visually highlighted or indicated.
 
-## Boosting Mood Activities:
+# Boosting Mood Activities:
 
 GIVEN the mood app displaying mood-specific content,
 WHEN I explore the activities to boost my mood,
@@ -33,41 +32,41 @@ Uplifting images or videos.
 Relaxation techniques.
 Music playlists.
 
-## Mood Quiz and Recommendations:
+# Mood Quiz and Recommendations:
 
 GIVEN the mood app with a mood quiz option,
 WHEN I take the mood quiz to determine my current mood,
 THEN I am prompted with a series of questions to assess my feelings,
 AND based on my responses, I receive my final mood that I can open in a separate browzer by pointing and pressing on MOOdy the cow.
 
-## Navigation and Links:
+# Navigation and Links:
 
 GIVEN the mood app with navigation options,
 WHEN I click on different mood categories,
 THEN I am directed to the corresponding content and activities related to that mood,
 AND the navigation bar or buttons clearly indicate the active mood.
 
-## Default Mood and Reset:
+# Default Mood and Reset:
 
 GIVEN the mood app upon initial load,
 WHEN I open the app without selecting a specific mood,
 THEN I am presented with default mood-related content,
 AND I have the option to take the mood quiz.
 
-## Responsive Design:
+# Responsive Design:
 
 GIVEN the mood app on various devices (desktop, tablet, mobile),
 WHEN I access the app,
 THEN the app's layout and content are responsive, adjusting appropriately to the screen size.
 
-## User Feedback and Interaction:
+# User Feedback and Interaction:
 
 GIVEN the mood app with interactive elements,
 WHEN I engage with mood-specific content or activities,
 THEN I receive immediate feedback (e.g., animation, change in color),
 AND my interaction enhances my mood experience.
 
-## Accessibility and Usability:
+# Accessibility and Usability:
 
 GIVEN the mood app,
 WHEN I navigate and interact with the app,
