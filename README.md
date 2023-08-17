@@ -75,7 +75,7 @@ AND my interaction enhances my mood experience.
 GIVEN the mood app,
 WHEN I navigate and interact with the app,
 THEN the app follows accessibility guidelines, providing readable text, alternative text for images.
-```
+
 
 
 ## Authors of this project:
