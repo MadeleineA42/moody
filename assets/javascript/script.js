@@ -1,3 +1,4 @@
+// Elements used within the code
 let questionEl = document.getElementById("question");
 let answerEl = document.getElementById("answers");
 let startBtn = document.getElementById("start");
@@ -9,9 +10,8 @@ let stressedResult = document.getElementById("stressedResult");
 let lovedResult = document.getElementById("lovedResult");
 let angryResult = document.getElementById("angryResult");
 
+// Global Vars
 var questionIndex = 0;
-
-startBtn.addEventListener("click", startQuiz);
 
 var happyPoints = 0;
 var sadPoints = 0;
@@ -19,6 +19,7 @@ var stressedPoints = 0;
 var lovedPoints = 0;
 var angryPoints = 0;
 
+// List of questions for the quiz to help determine mood
 const questionList = [
     {
         question: "What holiday describes your current MOOd?",
@@ -134,12 +135,14 @@ const questionList = [
 
 endResults.style.display = "none";
 
+// Function Button to start quiz and operate// Button to start quiz and operate
 startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
     showQuestion();
     questionIndex = 0;
 }
 
+// Function to show questions in order
 function showQuestion() {
     answerEl.innerHTML = "";
     questionEl.innerText = "";
@@ -174,7 +177,7 @@ function showQuestion() {
         });
     });
 }
-
+// Function to show answers
 function selectAnswer(button) {
     const selection = button.dataset.emotion;
 
@@ -208,7 +211,7 @@ function selectAnswer(button) {
         getMoodRating();
         showResults();
     }
-
+// function to assooicate answers clicked to points for mood to be selected at end
     function getMoodRating() {
         if (happyPoints >= 3) {
             console.log("You're Happy!");
@@ -256,7 +259,7 @@ function selectAnswer(button) {
                 '<a href="./src/angry.html"><img src="./assets/images/angry-cow.PNG" alt="Angry MOOdy" class="max-w-full h-auto w-96"></a>';
         }
     }
-
+// function to display results from quiz
     function showResults() {
         endResults.style.display = "block";
     }
