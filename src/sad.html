@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
-<script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
+  <script>
     tailwind.config = {
       theme: {
+        screens: {
+        },
         extend: {
           fontFamily: {
             'space': ['Space Grotesk', 'sans-serif'],
@@ -26,39 +29,52 @@
       }
     }
   </script>
-    <title>I'm sad!</title>
+  <title>I'm sad!</title>
 </head>
+
 <body class="text-pink-50 font-space">
-  <div
-  class="bg-cover bg-center h-screen relative"
-  style="background-image: url('../assets/images/relaxing.jpg');">
-  <div class="absolute inset-0 bg-black bg-opacity-40">
-  <header class="py-4 px-8 flex justify-center">
-    <a href="../index.html">
-      <img class="w-32 h-auto" src="../assets/images/sad-cow.PNG" alt="sad cow" />
-    </a>
-  </header>
-  <p class="font-smoke text-xl text-pink-50 flex justify-center">Click on mOOdy the cow to mosey on home</p>
-    <h1 class="text-5xl font-bold text-rose-50 flex justify-center">Feelin' <span class="text-blue-400">sad?</span></h1>
-    <h2 class="text-yellow-50 flex justify-center"> Let's bring your spirits up.</h2>
-    <main class="text-rose-600 flex justify-center">
+  <div class="bg-cover bg-center bg-fixed h-screen relative overflow-scroll" style="background-image: url('../assets/images/relaxing.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40">
+      <header class="py-4 px-8 flex justify-center">
+        <a href="../index.html">
+          <img class="w-32 h-auto" src="../assets/images/sad-cow.PNG" alt="sad cow" />
+        </a>
+      </header>
+      <p class="font-smoke text-xl text-pink-50 flex justify-center">Click on mOOdy the cow to mosey on home</p>
+      <h1 class="text-5xl font-bold text-rose-50 flex justify-center">Feelin' <span class="text-blue-400">sad?</span>
+      </h1>
+      <h2 class="text-yellow-50 flex justify-center"> Let's bring your spirits up.</h2>
+      <main class="text-rose-600 flex justify-center">
         <p>
-            <div>
-                <ul class="text-pink-50 text-center">
-                    <li>1. Acknowledge Your Feelings: It's okay to feel sad. Denying or suppressing feelings <br>can make them more intense.</li>
-                    <li>2. Talk to Someone: Sharing your feelings with a friend, family member, or therapist<br> can provide relief. Sometimes, just being heard can make a big difference.</li>
-                    <li>3. Express Yourself: Journaling, art, music, and other forms of creative expression<br> can be therapeutic outlets for sadness.</li>
-                    <li>4. Engage in Activities You Enjoy: Doing things you love can act as<br> a distraction and mood booster.</li>
-                    <li>5. Stay Active: Physical activity, like walking or yoga, releases endorphins which can boost your mood.</li>
-                    <li>6. Avoid Isolation: While it's natural to want to retreat when feeling down, isolating yourself can exacerbate feelings of sadness. Spend time with supportive people, even if it's just a short chat.</li>
-                    <li>7. Limit Stress: If possible, try to reduce sources of significant stress,<br> and explore stress-reducing techniques that work for you, like deep breathing or visualization.</li>
-                </ul>
-            </div>    
+        <div>
+          <ul class="text-pink-50 text-center">
+            <li>1. Acknowledge Your Feelings: It's okay to feel sad. Denying or suppressing feelings <br>can make them
+              more intense.</li>
+            <li>2. Talk to Someone: Sharing your feelings with a friend, family member, or therapist<br> can provide
+              relief. Sometimes, just being heard can make a big difference.</li>
+            <li>3. Express Yourself: Journaling, art, music, and other forms of creative expression<br> can be
+              therapeutic outlets for sadness.</li>
+            <li>4. Engage in Activities You Enjoy: Doing things you love can act as<br> a distraction and mood booster.
+            </li>
+            <li>5. Stay Active: Physical activity, like walking or yoga, releases endorphins which can boost your mood.
+            </li>
+            <li>6. Avoid Isolation: While it's natural to want to retreat when feeling down, isolating yourself can
+              exacerbate feelings of sadness. <br>Spend time with supportive people, even if it's just a short chat.</li>
+            <li>7. Limit Stress: If possible, try to reduce sources of significant stress,<br> and explore
+              stress-reducing techniques that work for you, like deep breathing or visualization.</li>
+          </ul>
+        </div>
         </p>
-    </main>
-    <div class="flex justify-center">
-      <iframe width="400" height="200" src="https://www.youtube.com/embed/RogITE1plk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </main>
+      <div class="flex flex-wrap justify-center">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/RogITE1plk0" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <footer class="text-rose-200 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
     </div>
-    <footer class="text-rose-200 flex justify-center">Made with ❤️ by YM<sub>3</sub>K</footer>
+  </div>
 </body>
+
 </html>
