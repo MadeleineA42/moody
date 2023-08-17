@@ -21,7 +21,7 @@ header {
   background-color: rgba(245, 245, 245, 0.5);
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  height: 200px; 
+  height: 260px; 
 }
 
 h1 {
@@ -29,16 +29,17 @@ h1 {
   font-size: 50px;
   height: 30px;
   padding-top: 20px;
-  padding-bottom: 35px;
+  padding-bottom: 60px;
   text-align: center;
   text-shadow: 4px 4px 8px rgba(218, 27, 252, 0.796);
   font-family: 'Great Vibes', cursive;
 }
 
 .loved-cow {
-  height: 150px;
+  height: 120px;
   width: 150px;
 }
+
 
 nav {
   background-color: rgba(235, 198, 243, 0.509);
