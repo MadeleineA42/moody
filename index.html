@@ -10,18 +10,6 @@
   <script>
     tailwind.config = {
       theme: {
-    screens: {
-      'sm': '640px',
-  
-      'md': '768px', 
-
-      'lg': '1024px',
-
-      'xl': '1280px',
-
-      '2xl': '1536px',
-    
-        },
         extend: {
           fontFamily: {
             'smokin': ['Smokum', 'cursive'],
@@ -45,6 +33,12 @@
       background-color: rgb(107, 174, 215, 0.7);
       cursor: pointer;
     }
+
+    .btn:hover {
+      background-color: rgba(79, 94, 103, 0.7);
+    }
+
+    
   </style>
 </head>
 
@@ -87,7 +81,7 @@
 
 
     <!-- Nav bar with Cow image-->
-    <div class="flex flex-shrink justify-evenly">
+    <div class="flex justify-evenly flex-wrap">
 
 
       <img class="max-h-[100vh] mt-4 md:mt-0" src="./assets/images/MOOdyTheCow.PNG"
