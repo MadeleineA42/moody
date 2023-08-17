@@ -27,8 +27,8 @@ header {
 h1 {
   color: rgb(255, 255, 255);
   font-size: 50px;
-  height: 30px;
-  padding-top: 20px;
+  height: 50px;
+  padding-top: 10px;
   padding-bottom: 60px;
   text-align: center;
   text-shadow: 4px 4px 8px rgba(218, 27, 252, 0.796);

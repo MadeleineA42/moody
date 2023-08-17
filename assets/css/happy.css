@@ -28,19 +28,17 @@ header {
 h1 {
   color: rgb(255, 255, 255);
   font-size: 50px;
-  height: 30px;
+  height: 50px;
   padding-top: 10px;
+  padding-bottom: 60px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(252, 233, 27, 0.796);
   font-family: 'Dancing Script', cursive;
 }
 
 .happy-cow {
-  height: auto;
+  height: 120px;
   width: 150px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 36px; 
 }
 
 nav {
