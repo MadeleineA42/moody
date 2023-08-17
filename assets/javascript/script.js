@@ -31,7 +31,7 @@ const questionList = [
         ],
     },
     {
-        question: "What color descibes your current MOOd?",
+        question: "What color describes your current MOOd?",
         answers: [
             { text: "Pink", loved: true },
             { text: "Yellow", happy: true, },
@@ -61,7 +61,7 @@ const questionList = [
         ],
     },
     {
-        question: "In your current MOOd, how do you view the glass?",
+        question: "In your current MOOd, how do you view the glass?🍷",
         answers: [
             { text: "Half Full", happy: true },
             { text: "Half Empty", sad: true },
@@ -114,7 +114,7 @@ const questionList = [
         question: "Which dessert best describes your current MOOd?",
         answers: [
             { text: "Fruit Cake", angry: true },
-            { text: "Candy", happy: true },
+            { text: "Apple Pie", happy: true },
             { text: "Cotton Candy", loved: true },
             { text: "Oatmeal Raisin Cookie that looks like Chocolate Chips", stressed: true },
             { text: "Ice Cream", sad: true },
