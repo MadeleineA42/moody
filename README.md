@@ -14,7 +14,7 @@ AS A user
 I WANT to boost my mood that I am in right now
 SO that I can feel better overall. 
 
-# Acceptance Criteria:
+# Acceptance Criteria
 
 ## Mood Selection and Display:
 
