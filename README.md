@@ -10,11 +10,15 @@ Each mood will have a dedicated page that captures the unique styling of the fee
 
 # User Story
 
+```
 AS A user
-I WANT to boost my mood that I am in right now
-SO that I can feel better overall. 
+I WANT to enhance my moods
+SO that I can assess my mood and access resources for mood improvement
+```
 
+## Acceptance Criteria
 
+```
 # Mood Selection and Display:
 
 GIVEN a mood app with mood categories,
@@ -71,6 +75,7 @@ AND my interaction enhances my mood experience.
 GIVEN the mood app,
 WHEN I navigate and interact with the app,
 THEN the app follows accessibility guidelines, providing readable text, alternative text for images.
+```
 
 
 ## Authors of this project:
